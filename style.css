@@ -1,0 +1,317 @@
+/* --- General Setup & Typography --- */
+:root {
+    --gold-color: #D4AF37;
+    --dark-red: #6a040f;
+    --off-white: #f8f7f2;
+    --dark-text: #2b2b2b;
+    --parchment: #fdf5e6;
+}
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    line-height: 1.7;
+    background-color: var(--off-white);
+    color: var(--dark-text);
+    margin: 0;
+}
+
+h1, h2, h3, h4, .chapter-number, .artwork-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+p, li {
+    font-size: 1.1rem;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--dark-red);
+    color: var(--off-white);
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 8px solid var(--gold-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header .subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* --- Main Content & Cards --- */
+main {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+#kintsugi-concept {
+    background: var(--parchment);
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#kintsugi-concept h2 {
+    color: var(--dark-red);
+    border-bottom: 2px solid var(--gold-color);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#kintsugi-concept ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+#kintsugi-concept li {
+    margin-bottom: 10px;
+}
+
+.chapter-card {
+    display: flex;
+    background: #fff;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/* Alternating layout for visual interest */
+.chapter-card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.chapter-image-container {
+    flex: 1;
+    background-color: #1a1a1a;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.artwork-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0,0,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.chapter-text-container {
+    flex: 1;
+    padding: 40px;
+}
+
+.chapter-number {
+    color: var(--gold-color);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.chapter-text-container h3 {
+    font-size: 2.5rem;
+    color: var(--dark-red);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.chapter-text-container h4 {
+    font-size: 1.4rem;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* --- Artwork Implementations --- */
+
+#chapter1-art {
+    background: radial-gradient(circle, #343d46, #1a1a1a);
+}
+#chapter1-art::before { /* Luminous Figure */
+    content: '';
+    width: 80px;
+    height: 200px;
+    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.7), transparent 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--gold-color), 0 0 50px var(--gold-color);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+#chapter2-art {
+    background: linear-gradient(to top, #001f3f, #7FDBFF);
+}
+#chapter2-art::before { /* Ark */
+    content: '';
+    width: 150px;
+    height: 70px;
+    background: #604020;
+    border: 2px solid #402010;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 1;
+    animation: rock 5s infinite ease-in-out;
+}
+#chapter2-art::after { /* Rainbow */
+    content: '';
+    width: 300px;
+    height: 150px;
+    border-radius: 150px 150px 0 0;
+    position: absolute;
+    bottom: 50%;
+    background: linear-gradient(to top, rgba(255,0,0,0.7), rgba(255,165,0,0.7), rgba(255,255,0,0.7), rgba(0,128,0,0.7), rgba(0,0,255,0.7), rgba(75,0,130,0.7));
+}
+
+#chapter3-art {
+    background: #4d3d3d;
+}
+#chapter3-art::before { /* Golden Thread */
+    content: '';
+    width: 300px;
+    height: 2px;
+    background: var(--gold-color);
+    box-shadow: 0 0 10px var(--gold-color);
+    position: absolute;
+    animation: weave 8s infinite linear;
+}
+
+#chapter4-art {
+    background: #e0e0e0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+#chapter4-art::before { /* Performance Chart Line */
+    content: '';
+    width: 80%;
+    height: 150px;
+    border: 3px solid var(--dark-red);
+    border-color: var(--dark-red) transparent transparent transparent;
+    clip-path: polygon(0% 70%, 15% 20%, 25% 90%, 40% 75%, 60% 85%, 80% 60%, 100% 80%);
+    animation: draw-line 4s ease-out forwards;
+}
+
+#chapter5-art {
+    background: #282828;
+}
+#chapter5-art::before, #chapter5-art::after { /* The Two Hands */
+    content: '';
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+}
+#chapter5-art::before { /* King Hand */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><path d="M50 150 L20 100 Q10 80 25 60 L40 20 Q50 0 60 20 L75 60 Q90 80 80 100 Z" fill="none" stroke="%23D4AF37" stroke-width="3"/></svg>' );
+    left: 20%;
+}
+#chapter5-art::after { /* Priest Hand */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150"><path d="M50 150 L20 100 Q10 80 25 60 L40 20 Q50 0 60 20 L75 60 Q90 80 80 100 Z" fill="none" stroke="%23f8f7f2" stroke-width="3"/></svg>' );
+    right: 20%;
+    transform: scaleX(-1);
+}
+
+#chapter6-art {
+    background: linear-gradient(90deg, #333 50%, #ffefd5 50%);
+}
+#chapter6-art::before { /* Ruined Vase */
+    content: '🏺';
+    font-size: 100px;
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%) rotate(-15deg);
+    filter: grayscale(100%) brightness(0.5);
+}
+#chapter6-art::after { /* Restored Vase Vision */
+    content: '🏺';
+    font-size: 100px;
+    position: absolute;
+    right: 25%;
+    transform: translateX(50%);
+    color: var(--gold-color);
+    text-shadow: 0 0 20px var(--gold-color);
+    animation: pulse 3s infinite;
+}
+
+#chapter7-art {
+    background: radial-gradient(circle, #4c0000, #1c0000);
+}
+#chapter7-art::before { /* Heart of the Masterpiece */
+    content: '❤';
+    font-size: 150px;
+    color: var(--parchment);
+    position: relative;
+    text-shadow: 0 0 10px #000;
+}
+#chapter7-art::after { /* Golden Light */
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--gold-color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px 10px var(--gold-color), 0 0 40px 20px rgba(212,175,55,0.5);
+    animation: pulse 2s infinite;
+}
+
+/* --- Animations --- */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes rock {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+}
+
+@keyframes weave {
+    0% { transform: translateX(-100px) rotate(0deg); }
+    50% { transform: translateX(100px) rotate(5deg); }
+    100% { transform: translateX(-100px) rotate(0deg); }
+}
+
+@keyframes draw-line {
+    from { clip-path: polygon(0% 70%, 0% 70%, 0% 90%, 0% 75%, 0% 85%, 0% 60%, 0% 80%); }
+    to { clip-path: polygon(0% 70%, 15% 20%, 25% 90%, 40% 75%, 60% 85%, 80% 60%, 100% 80%); }
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--dark-text);
+    color: var(--off-white);
+    font-size: 0.9rem;
+}
