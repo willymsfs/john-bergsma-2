@@ -1,138 +1,1011 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>God's Divine Restoration Project: A Reimagining of Salvation History</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bible Basics for Catholics — Seven Covenants of Salvation History</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --gold:#d4a017;--gold2:#f0c040;--gold3:#fdf3c7;--goldb:#8b6914;
+  --eden:#1a5c2e;--eden2:#2e8b57;--eden3:#e8f5e9;
+  --flood:#1a3a5c;--flood2:#2a5f8f;--flood3:#e3eef8;
+  --abr:#7c2d12;--abr2:#c0392b;--abr3:#fdf0ed;
+  --moses:#5a1a7a;--moses2:#8e44ad;--moses3:#f5eaff;
+  --david:#b8860b;--david2:#e6a817;--david3:#fdf8e8;
+  --proph:#1a4a6a;--proph2:#2980b9;--proph3:#eaf4fb;
+  --jesus:#8b0000;--jesus2:#c0392b;--jesus3:#fff5f5;
+  --ink:#1c1208;--ink2:#3d2b0e;--cream:#fdfaf4;--cream2:#f0e8d0;
+  --white:#fff;
+  --fh:'Cinzel Decorative',Georgia,serif;
+  --fb:'Crimson Text',Georgia,serif;
+  --fu:'DM Sans',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:20px;line-height:1.8;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+
+/* ===== NAV ===== */
+#nav{position:sticky;top:0;z-index:300;background:rgba(28,18,8,.97);backdrop-filter:blur(12px);border-bottom:3px solid var(--gold);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.brand{font-family:var(--fh);font-size:.8rem;color:var(--gold2);cursor:pointer;letter-spacing:.05em}
+.brand small{display:block;font-family:var(--fu);font-size:.55rem;color:rgba(240,192,64,.5);letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.nbts{display:flex;gap:.4rem;flex-wrap:wrap}
+.nb{font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.28rem .75rem;border-radius:5px;cursor:pointer;border:none;transition:all .25s}
+.ng{background:rgba(212,160,23,.2);color:var(--gold2);border:1px solid rgba(212,160,23,.35)}.ng:hover,.ng.act{background:var(--gold);color:var(--ink)}
+
+/* ===== SCREEN SYSTEM ===== */
+.screen{display:none}
+.screen.active{display:block;animation:fu .4s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ===== HERO ===== */
+.hero{min-height:95vh;background:radial-gradient(ellipse at 70% 30%,rgba(212,160,23,.18) 0%,transparent 60%),linear-gradient(160deg,#0a0500 0%,#1c1208 45%,#0d1e0a 100%);display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 4rem;position:relative;overflow:hidden;color:#fff}
+.hero-bg{position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath fill='%23d4a017' fill-opacity='0.04' d='M40 10 L50 30 L70 30 L55 45 L60 65 L40 52 L20 65 L25 45 L10 30 L30 30 Z'/%3E%3C/g%3E%3C/svg%3E")}
+.h-tag{font-family:var(--fu);font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);border:1px solid rgba(212,160,23,.4);background:rgba(212,160,23,.12);display:inline-block;padding:.25rem .9rem;border-radius:3px;margin-bottom:1.5rem}
+.h-title{font-family:var(--fh);font-size:clamp(1.6rem,5vw,4rem);font-weight:700;line-height:1.08;margin-bottom:.6rem;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.h-title em{font-style:italic;color:var(--gold2)}
+.h-sub{font-family:var(--fb);font-style:italic;font-size:1.15rem;color:rgba(255,255,255,.72);margin-bottom:.8rem}
+.h-rule{width:60px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:2px;margin:1.3rem 0}
+.h-quote{font-family:var(--fb);font-style:italic;font-size:1.05rem;color:rgba(255,255,255,.9);border-left:3px solid var(--gold);padding-left:1.2rem;max-width:680px;margin-bottom:2rem;line-height:1.8}
+.h-quote cite{display:block;font-size:.78rem;font-style:normal;color:var(--gold2);margin-top:.4rem;font-family:var(--fu)}
+.hbtns{display:flex;gap:.8rem;flex-wrap:wrap}
+.hbp{font-family:var(--fu);font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;padding:.75rem 2rem;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--goldb));color:#fff;border:none;cursor:pointer;transition:all .28s;box-shadow:0 4px 18px rgba(212,160,23,.4)}
+.hbp:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(212,160,23,.6)}
+.hbs{font-family:var(--fu);font-weight:700;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;padding:.75rem 1.7rem;border-radius:8px;background:transparent;color:rgba(255,255,255,.82);border:1.5px solid rgba(255,255,255,.25);cursor:pointer;transition:all .28s}
+.hbs:hover{border-color:var(--gold2);color:var(--gold2)}
+
+/* MOUNTAIN ROW SVG in hero */
+.mountain-row{margin-top:3rem;display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-end}
+.mt-badge{text-align:center;cursor:pointer;transition:all .25s}
+.mt-badge:hover{transform:translateY(-4px)}
+.mt-badge svg{display:block;margin:0 auto}
+.mt-label{font-family:var(--fu);font-size:.58rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:.3rem;color:rgba(255,255,255,.6)}
+
+/* ===== OVERVIEW ===== */
+#scr-ov{padding:3rem 2rem 5rem}
+.ov-h{max-width:1180px;margin:0 auto 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-bottom:2px solid var(--cream2);padding-bottom:1rem}
+.ov-t{font-family:var(--fh);font-size:clamp(1.2rem,2.5vw,1.8rem);font-weight:700;color:var(--ink)}
+.cgrid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.3rem}
+.ccard{background:var(--white);border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(28,18,8,.1);cursor:pointer;transition:all .28s;border:1px solid var(--cream2)}
+.ccard:hover{transform:translateY(-4px);box-shadow:0 8px 42px rgba(28,18,8,.18)}
+.cc-hd{padding:1.2rem 1.5rem 1rem;color:#fff;position:relative;overflow:hidden;min-height:130px;display:flex;flex-direction:column;justify-content:flex-end}
+.cc-hd::before{content:attr(data-icon);position:absolute;right:-4px;top:-8px;font-size:5.5rem;opacity:.15;line-height:1;pointer-events:none}
+.cc-num{font-family:var(--fu);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(255,255,255,.18);padding:.18rem .55rem;border-radius:3px;margin-bottom:.45rem;display:inline-block;width:fit-content}
+.cc-nm{font-family:var(--fh);font-size:.95rem;font-weight:700;line-height:1.2}
+.cc-sb{font-style:italic;font-size:.82rem;opacity:.82;margin-top:.15rem;font-family:var(--fb)}
+.cc-bd{padding:.95rem 1.4rem 1rem;font-size:.88rem;color:var(--ink2);line-height:1.65}
+.cc-ft{padding:.65rem 1.4rem;color:#fff;display:flex;align-items:center;justify-content:space-between;font-family:var(--fu);font-size:.66rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
+/* ===== DETAIL ===== */
+.d-hd{color:#fff;padding:3.5rem 3rem 3rem;position:relative;overflow:hidden}
+.d-hd::before{content:attr(data-icon);position:absolute;right:-10px;bottom:-20px;font-size:16rem;opacity:.08;line-height:1;pointer-events:none}
+.d-inner{max-width:960px}
+.d-num{font-family:var(--fu);font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin-bottom:.4rem}
+.d-title{font-family:var(--fh);font-size:clamp(1.5rem,4vw,2.8rem);font-weight:700;line-height:1.08;margin-bottom:.3rem}
+.d-sb{font-family:var(--fb);font-style:italic;font-size:1.05rem;opacity:.88;margin-bottom:1rem}
+.d-tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.dtag{font-family:var(--fu);font-size:.62rem;font-weight:700;background:rgba(255,255,255,.18);padding:.2rem .65rem;border-radius:20px}
+.db{max-width:960px;margin:0 auto;padding:2.5rem 2rem 5rem}
+
+/* CONTENT BLOCKS */
+.sec{margin-bottom:2.4rem}
+.sec-lbl{font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--clr,var(--gold));margin-bottom:.8rem;padding-bottom:.38rem;border-bottom:2px solid var(--clrp,var(--gold3))}
+.prose{background:var(--white);border-radius:14px;padding:1.8rem 2rem;box-shadow:0 4px 24px rgba(28,18,8,.09);border-left:5px solid var(--clr,var(--gold));font-size:20px;color:var(--ink2);line-height:1.82}
+.prose p+p{margin-top:.85rem}
+.prose h4{font-family:var(--fh);font-size:1rem;font-weight:700;color:var(--clr,var(--ink));margin:.9rem 0 .4rem}
+.prose strong{color:var(--ink);font-weight:600}
+.bergsma-voice{background:linear-gradient(135deg,#1c1208,#3d2b0e);color:#fff;border-radius:14px;padding:1.6rem 1.9rem;margin:1.3rem 0;box-shadow:0 8px 40px rgba(28,18,8,.25);position:relative}
+.bv-lbl{font-family:var(--fu);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin-bottom:.55rem;display:block}
+.bv-text{font-family:var(--fb);font-style:italic;font-size:1.1rem;line-height:1.75;color:rgba(255,255,255,.95)}
+.bv-text::before{content:'"';font-family:var(--fh);font-size:3rem;color:var(--gold2);opacity:.4;position:absolute;top:1rem;right:1.2rem;line-height:1}
+.bv-cite{font-size:.76rem;color:rgba(240,192,64,.7);margin-top:.5rem;font-family:var(--fu);font-style:normal}
+.scripture{background:linear-gradient(135deg,#0a1e08,#1a3a14);color:#fff;border-radius:14px;padding:1.5rem 1.8rem;margin:1.2rem 0}
+.sc-lbl{font-family:var(--fu);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#81c784;margin-bottom:.5rem;display:block}
+.sc-text{font-family:var(--fb);font-style:italic;font-size:1.12rem;line-height:1.72;color:rgba(255,255,255,.95)}
+.sc-ref{font-size:.75rem;color:rgba(129,199,132,.75);margin-top:.45rem;font-family:var(--fu)}
+
+/* ===== MOUNTAIN SVG DIAGRAMS ===== */
+.diagram-wrap{background:var(--white);border-radius:14px;padding:1.5rem;box-shadow:0 4px 24px rgba(28,18,8,.1);margin:1rem 0;text-align:center}
+.diag-cap{font-family:var(--fu);font-size:.7rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--clr,var(--ink));margin-top:.8rem;opacity:.75}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-top:.5rem}
+.card{background:var(--white);border-radius:10px;padding:1.1rem 1.3rem;box-shadow:0 4px 20px rgba(28,18,8,.09);border-top:3px solid var(--clr,var(--gold))}
+.card-ic{font-size:1.7rem;margin-bottom:.4rem}
+.card-ti{font-family:var(--fh);font-size:.9rem;font-weight:700;color:var(--clr,var(--ink));margin-bottom:.38rem}
+.card-bd{font-size:.88rem;color:var(--ink2);line-height:1.65;font-family:var(--fb)}
+.tl{position:relative;padding-left:1.9rem;margin-top:.5rem}
+.tl::before{content:'';position:absolute;left:.55rem;top:.5rem;bottom:.5rem;width:2px;background:linear-gradient(to bottom,var(--clr,var(--gold)),transparent)}
+.tl-item{position:relative;margin-bottom:1.3rem}
+.tl-dot{position:absolute;left:-1.95rem;top:.3rem;width:11px;height:11px;border-radius:50%;background:var(--clr,var(--gold));border:2px solid var(--cream);box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.tl-date{font-family:var(--fu);font-size:.63rem;font-weight:700;letter-spacing:.08em;color:var(--clr,var(--gold));text-transform:uppercase;margin-bottom:.2rem}
+.tl-body{font-size:.9rem;color:var(--ink2);line-height:1.65;background:var(--white);border-radius:8px;padding:.82rem .95rem;box-shadow:0 2px 8px rgba(0,0,0,.07);font-family:var(--fb)}
+.vat-box{background:linear-gradient(135deg,#1e1b4b,#312e81);color:#fff;border-radius:12px;padding:1.3rem 1.6rem;margin:1.2rem 0}
+.vat-lbl{font-family:var(--fu);font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#a5b4fc;margin-bottom:.5rem;display:block}
+.vat-body{font-size:.9rem;line-height:1.72;color:rgba(255,255,255,.92);font-family:var(--fb)}
+.cov-progress{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.cov-pip{padding:.38rem .9rem;border-radius:20px;font-family:var(--fu);font-size:.65rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;opacity:.7}
+.cov-pip.done{opacity:1}
+.d-nav{margin-top:2.5rem;display:flex;gap:.65rem;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}
+.reveal.vis{opacity:1;transform:none}
+
+@media(max-width:900px){.hero{padding:4rem 1.8rem 3rem;min-height:auto}.d-hd{padding:2.5rem 1.5rem 2rem}.db{padding:1.5rem 1rem 4rem}.mountain-row{gap:.9rem}}
+@media(max-width:600px){#nav{padding:.5rem 1rem}#scr-ov{padding:2rem .85rem 4rem}.cards{grid-template-columns:1fr}.cgrid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
+<nav id="nav">
+  <div class="brand" onclick="go('hero')">Bible Basics for Catholics <small>Seven Covenants · Salvation History · John Bergsma</small></div>
+  <div class="nbts" id="nbts">
+    <button class="nb ng" onclick="go('ov')">All Chapters</button>
+  </div>
+</nav>
 
-    <header>
-        <h1>God's Divine Restoration Project</h1>
-        <p class="subtitle">A Creative Reimagining of John Bergsma's "Bible Basics for Catholics"</p>
-    </header>
+<div id="screen-hero" class="screen active">
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="h-tag">Seven Covenants · Seven Mountaintops</div>
+  <h1 class="h-title">Bible Basics <em>for Catholics</em></h1>
+  <p class="h-sub">A New Picture of Salvation History — Dr. John Bergsma, Franciscan University of Steubenville</p>
+  <div class="h-rule"></div>
+  <blockquote class="h-quote">
+    "Time and again you offered them covenants and through the prophets taught them to look forward to salvation."
+    <cite>— Eucharistic Prayer IV · The thread that ties the whole Bible together</cite>
+  </blockquote>
+  <div class="hbtns">
+    <button class="hbp" onclick="go('ov')">Explore All Seven Chapters →</button>
+    <button class="hbs" onclick="showChap('c1')">Begin: Adam &amp; Eden</button>
+  </div>
+  <div class="mountain-row" id="mrow"></div>
+</div>
+</div>
 
-    <main>
-        <section id="kintsugi-concept">
-            <h2>The Kintsugi Masterpiece: An Artistic Concept</h2>
-            <p>
-                <em>Kintsugi</em> is the Japanese art of repairing broken pottery by mending the areas of breakage with lacquer dusted with powdered gold. This philosophy, which treats breakage and repair as a beautiful part of an object's history, is our guiding metaphor for salvation history.
-            </p>
-            <ul>
-                <li><strong>Humanity:</strong> A beautiful porcelain vase, crafted by God.</li>
-                <li><strong>The Fall (Sin ):</strong> The vase is dropped and shatters.</li>
-                <li><strong>The Covenants:</strong> Each covenant is a step in God's meticulous <em>Kintsugi</em> process, filling the cracks with the pure gold of His divine life, making the restored vase more beautiful than the original.</li>
-            </ul>
-        </section>
+<div id="scr-ov" class="screen">
+  <div class="ov-h">
+    <h2 class="ov-t">Seven Covenants of Salvation History</h2>
+    <button class="nb ng act" onclick="go('hero')">← Introduction</button>
+  </div>
+  <div class="cgrid" id="cgrid"></div>
+</div>
 
-        <!-- Chapter 1 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter1-art">
-                <!-- CSS will create the artwork here -->
-                <div class="artwork-title">The Luminous Blueprint</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter One</span>
-                <h3>The Original Blueprint</h3>
-                <h4>The Adamic Covenant</h4>
-                <p><strong>New Perspective:</strong> The Architect's Perfect Design. Before the vase was made, there was a blueprint. This chapter is about the original, intended design for humanity and our relationship with the Architect, God.</p>
-                <p><strong>Explanation:</strong> Adam wasn't just the first man; he was the blueprint for what it means to be fully human. Created as a "son of God," he was given a five-fold identity (son, priest, king, prophet, bridegroom) that defined his purpose: to live in loving communion with the Architect and care for His creation. This was the state of original perfection, the vase in its flawless, whole state.</p>
-            </div>
-        </section>
+<div id="scr-det" class="screen"><div id="dcont"></div></div>
 
-        <!-- Chapter 2 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter2-art">
-                 <div class="artwork-title">From Perfection to Salvage</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter Two</span>
-                <h3>The Shattering & The First Repair</h3>
-                <h4>The Noahic Covenant</h4>
-                <p><strong>New Perspective:</strong> Salvage Operation. The masterpiece shatters. The world is flooded with chaos. God's first act isn't to discard the pieces, but to perform a salvage operation—rescuing a remnant to begin the slow process of restoration.</p>
-                <p><strong>Explanation:</strong> The Fall represents the shattering of the vase. God uses the flood not to destroy, but to wash the pieces clean. Noah and his family are the salvaged fragments. The covenant with Noah is God's promise not to abandon the project, sealed with a rainbow—the first glimmer of the golden lacquer to come.</p>
-            </div>
-        </section>
+<script>
+/* ========================================================
+   CHAPTER DATA — Full Bergsma voice, all diagrams as SVG
+   ======================================================== */
+const C=[
+/* ===================== C1: ADAM ===================== */
+{id:'c1',num:'Chapter One',icon:'🌿',
+ nm:'Setting the Son in the Garden',sb:'The Covenant with Adam',
+ c:'#1a5c2e',dk:'#0a2e16',pl:'#e8f5e9',
+ tags:['Genesis 1–2','Creation Temple','Adam as Priest King','Son of God','Eden Mountain','Covenant'],
+ prev:'What is the meaning of life? The Bible answers this question in its very first pages — and the answer is far more exciting than the number 42.',
+ ct:[
+  {t:'bergsma',tx:`You ought to know the Bible better than you do, and you probably feel vaguely guilty that you don't. Come on, admit it. I know it's true. So here's what I want to do: give you the big picture I wish someone had handed me before I spent twelve years in graduate school almost accidentally stumbling onto it. The key to everything? One little word: <strong>covenant</strong>. That's it. That's the whole Bible in one word.`,cite:'John Bergsma — Introduction'},
+  {t:'prose',l:'What in the World Is a Covenant?',tx:`<p>A covenant is not a contract. When you make a contract, you exchange property. When you make a covenant, you exchange <em>persons</em> — you make someone part of your family. Two excellent examples: adoption and marriage. In the ancient world, you'd stand before the village elders, swear solemn oaths, and leave with a new son or daughter. In marriage, two strangers walk into a church, and walk out as Mr. and Mrs. John Q. Doe.</p><p>When the priest at Mass prays, "Time and again you offered them covenants," he means: "God has repeatedly tried to make us his family." Because that is what God wants. Not a casual acquaintance. Not an on-again, off-again dating game. He wants the full deal: commitment, love, family, forever.</p><p>In the Bible, six major covenant mediators step forward to represent humanity before God: <strong>Adam · Noah · Abraham · Moses · David · Jesus</strong>. And every single one of them met God on a mountaintop. Coincidence? No chance.</p>`},
+  {t:'diag',l:'The Creation Temple — Seven Days',svg:`<svg viewBox="0 0 580 360" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87ceeb"/><stop offset="100%" stop-color="#1a3a5c"/></linearGradient>
+    <linearGradient id="earth" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4a7c59"/><stop offset="100%" stop-color="#2d5a27"/></linearGradient>
+  </defs>
+  <!-- Title -->
+  <text x="290" y="25" text-anchor="middle" font-size="14" font-weight="700" fill="#1c1208" letter-spacing="2" font-family="'Cinzel Decorative',serif">THE CREATION TEMPLE</text>
+  <!-- Main grid -->
+  <!-- Day 1: Light/Dark -->
+  <rect x="30" y="40" width="80" height="90" rx="6" fill="#ffd54f"/>
+  <rect x="30" y="130" width="80" height="90" rx="6" fill="#1a237e"/>
+  <text x="70" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#1c1208">☀️</text>
+  <text x="70" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#1c1208">DAY 1</text>
+  <text x="70" y="122" text-anchor="middle" font-size="9" fill="#1c1208">LIGHT / TIME</text>
+  <text x="70" y="178" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">🌙</text>
+  <text x="70" y="194" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">DARK</text>
+  <!-- Day 2: Sky/Sea -->
+  <rect x="120" y="40" width="80" height="90" rx="6" fill="url(#sky)"/>
+  <rect x="120" y="130" width="80" height="90" rx="6" fill="#1976d2"/>
+  <text x="160" y="80" text-anchor="middle" font-size="16">☁️</text>
+  <text x="160" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">DAY 2</text>
+  <text x="160" y="122" text-anchor="middle" font-size="9" fill="#fff">SKY / SPACE</text>
+  <text x="160" y="170" text-anchor="middle" font-size="16">🌊</text>
+  <text x="160" y="200" text-anchor="middle" font-size="9" fill="#fff">SEAS</text>
+  <!-- Day 3: Land -->
+  <rect x="210" y="40" width="80" height="180" rx="6" fill="url(#earth)"/>
+  <text x="250" y="95" text-anchor="middle" font-size="20">🏝️</text>
+  <text x="250" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">DAY 3</text>
+  <text x="250" y="146" text-anchor="middle" font-size="9" fill="#fff">LAND / HABITAT</text>
+  <text x="250" y="180" text-anchor="middle" font-size="16">🌳</text>
+  <!-- Equals -->
+  <text x="305" y="135" text-anchor="middle" font-size="22" fill="#d4a017" font-weight="900">↔</text>
+  <text x="305" y="155" text-anchor="middle" font-size="9" fill="#d4a017" font-weight="700">FORMS</text>
+  <text x="305" y="167" text-anchor="middle" font-size="9" fill="#d4a017" font-weight="700">FILLS</text>
+  <!-- Day 4: Sun/Moon/Stars -->
+  <rect x="320" y="40" width="80" height="90" rx="6" fill="#f57f17"/>
+  <rect x="320" y="130" width="80" height="90" rx="6" fill="#1a237e"/>
+  <text x="360" y="82" text-anchor="middle" font-size="18">☀️🌙⭐</text>
+  <text x="360" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">DAY 4</text>
+  <text x="360" y="122" text-anchor="middle" font-size="9" fill="#fff">FILLS TIME</text>
+  <text x="360" y="172" text-anchor="middle" font-size="9" fill="#fff">Marks seasons,</text>
+  <text x="360" y="186" text-anchor="middle" font-size="9" fill="#fff">mo'ed — liturgy!</text>
+  <!-- Day 5: Birds/Fish -->
+  <rect x="410" y="40" width="80" height="90" rx="6" fill="url(#sky)"/>
+  <rect x="410" y="130" width="80" height="90" rx="6" fill="#1976d2"/>
+  <text x="450" y="82" text-anchor="middle" font-size="18">🐦🐟</text>
+  <text x="450" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">DAY 5</text>
+  <text x="450" y="122" text-anchor="middle" font-size="9" fill="#fff">FILLS SPACE</text>
+  <!-- Day 6: Animals/Adam -->
+  <rect x="500" y="40" width="70" height="180" rx="6" fill="#2e7d32"/>
+  <text x="535" y="95" text-anchor="middle" font-size="18">🦁🐍</text>
+  <text x="535" y="130" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">DAY 6</text>
+  <text x="535" y="145" text-anchor="middle" font-size="9" fill="#fff">FILLS HABITAT</text>
+  <text x="535" y="170" text-anchor="middle" font-size="18">👑</text>
+  <text x="535" y="190" text-anchor="middle" font-size="9" fill="#ffd54f">ADAM!</text>
+  <!-- Roof / Sabbath -->
+  <polygon points="30,235 290,265 550,235 550,240 30,240" fill="#d4a017" opacity=".15"/>
+  <rect x="30" y="238" width="520" height="36" rx="6" fill="#d4a017"/>
+  <text x="290" y="252" text-anchor="middle" font-size="11" font-weight="700" fill="#1c1208">⛪  DAY 7 — THE SABBATH — THE ROOF OF THE TEMPLE  ⛪</text>
+  <text x="290" y="268" text-anchor="middle" font-size="10" fill="#1c1208">God rests — and in the ancient world, a god "rested" in his TEMPLE.</text>
+  <!-- Bottom labels -->
+  <text x="70" y="300" text-anchor="middle" font-size="10" fill="#5a3a00" font-weight="700">PROBLEM 1</text>
+  <text x="70" y="314" text-anchor="middle" font-size="10" fill="#5a3a00">"FORMLESS"</text>
+  <text x="70" y="328" text-anchor="middle" font-size="9" fill="#7c5c00">Tohu wabohu</text>
+  <text x="320" y="300" text-anchor="middle" font-size="10" fill="#1a3a5c" font-weight="700">SOLVED → PROBLEM 2</text>
+  <text x="320" y="314" text-anchor="middle" font-size="10" fill="#1a3a5c">"EMPTY" — Bohu</text>
+  <text x="320" y="328" text-anchor="middle" font-size="9" fill="#2a5080">Days 4–6 fill what Days 1–3 formed</text>
+</svg>`,cap:'Days 1–3 form the universe; Days 4–6 fill it. The seventh day is the "roof" — God rests in his temple.'},
+  {t:'prose',l:'Adam\'s Five-Fold Identity — The Meaning of Your Life',tx:`<p>Here's the "meaning of life" answer the Bible gives in its very first pages. God makes Adam "in his image and likeness" — and Genesis 5:3 tells us what that means, because the same phrase is used when Adam has a son: "his image, after his likeness." Image and likeness means <em>sonship</em>. Adam is the son of God (Luke 3:38).</p><p>But that's not all. Genesis 2 tells us God places Adam in Eden "to serve and to guard it." Every ancient reader knew those two Hebrew verbs together — <em>abad</em> and <em>shamar</em> — were the verbs that described what priests do in the sanctuary (Numbers 3:7–8). Adam is a <strong>priest</strong> in the original garden-temple.</p><p>Genesis 1:26 gives Adam "dominion" over all creatures — a <strong>kingly</strong> role. Genesis 2:19–20 gives Adam the privilege of naming the animals — and naming is what creators do, so Adam is speaking on behalf of God, acting as God's <strong>prophet</strong>. Finally, Adam bursts into poetry when he sees Eve: "Bone of my bone and flesh of my flesh" — covenant-making language, making him the universal <strong>bridegroom</strong>.</p><p>St. John Paul II called this "the original solitude, the original unity, and the original nakedness" — the <em>nuptial meaning of the body</em>. Before sin, before shame, before the Fall — this is what God designed us to be.</p>`},
+  {t:'diag',l:'Adam — Son · King · Priest · Prophet · Bridegroom',svg:`<svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffd54f" stop-opacity=".45"/>
+      <stop offset="100%" stop-color="#1a5c2e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background mountain / Eden -->
+  <ellipse cx="240" cy="310" rx="200" ry="30" fill="#1a5c2e" opacity=".18"/>
+  <polygon points="180,310 240,120 300,310" fill="#2e8b57" opacity=".22"/>
+  <!-- Glow -->
+  <ellipse cx="240" cy="200" rx="120" ry="100" fill="url(#glow)"/>
+  <!-- Adam figure -->
+  <!-- Body -->
+  <rect x="220" y="180" width="40" height="60" rx="8" fill="#f5c842"/>
+  <!-- Head with shine (son of God) -->
+  <circle cx="240" cy="165" r="22" fill="#f5c842" stroke="#d4a017" stroke-width="3"/>
+  <!-- Radiant shine lines -->
+  <line x1="240" y1="138" x2="240" y2="126" stroke="#ffd54f" stroke-width="2.5"/>
+  <line x1="255" y1="143" x2="263" y2="133" stroke="#ffd54f" stroke-width="2.5"/>
+  <line x1="225" y1="143" x2="217" y2="133" stroke="#ffd54f" stroke-width="2.5"/>
+  <line x1="262" y1="155" x2="274" y2="151" stroke="#ffd54f" stroke-width="2.5"/>
+  <line x1="218" y1="155" x2="206" y2="151" stroke="#ffd54f" stroke-width="2.5"/>
+  <!-- Crown (King) -->
+  <polygon points="218,145 224,133 230,142 236,130 242,142 248,130 254,142 260,133 264,145" fill="#d4a017" stroke="#b8860b" stroke-width="1.5"/>
+  <circle cx="230" cy="136" r="3" fill="#e74c3c"/>
+  <circle cx="240" cy="132" r="3" fill="#2ecc71"/>
+  <circle cx="250" cy="136" r="3" fill="#3498db"/>
+  <!-- Stole (Priest) -->
+  <rect x="228" y="180" width="7" height="55" rx="3" fill="#8e44ad" opacity=".85"/>
+  <rect x="245" y="180" width="7" height="55" rx="3" fill="#8e44ad" opacity=".85"/>
+  <!-- Arms -->
+  <rect x="196" y="182" width="24" height="12" rx="6" fill="#f5c842"/>
+  <rect x="260" y="182" width="24" height="12" rx="6" fill="#f5c842"/>
+  <!-- Scroll in right hand (Prophet) -->
+  <rect x="280" y="177" width="18" height="26" rx="3" fill="#fffde7" stroke="#d4a017" stroke-width="1.5"/>
+  <line x1="283" y1="182" x2="295" y2="182" stroke="#d4a017" stroke-width="1" opacity=".7"/>
+  <line x1="283" y1="188" x2="295" y2="188" stroke="#d4a017" stroke-width="1" opacity=".7"/>
+  <line x1="283" y1="194" x2="292" y2="194" stroke="#d4a017" stroke-width="1" opacity=".7"/>
+  <!-- Ring on left hand (Bridegroom) -->
+  <circle cx="198" cy="186" r="5" fill="none" stroke="#d4a017" stroke-width="2.5"/>
+  <!-- Legs -->
+  <rect x="222" y="240" width="14" height="40" rx="6" fill="#f5c842"/>
+  <rect x="244" y="240" width="14" height="40" rx="6" fill="#f5c842"/>
+  <!-- Labels -->
+  <text x="240" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="#d4a017" letter-spacing="1">✨ SON OF GOD ✨</text>
+  <text x="318" y="178" font-size="11" font-weight="700" fill="#8e44ad">📜 PROPHET</text>
+  <text x="318" y="196" font-size="10" fill="#8e44ad">(speaks God's word)</text>
+  <text x="148" y="178" text-anchor="end" font-size="11" font-weight="700" fill="#d4a017">💍 BRIDEGROOM</text>
+  <text x="148" y="196" text-anchor="end" font-size="10" fill="#d4a017">(bone of my bone)</text>
+  <text x="240" y="155" text-anchor="middle" font-size="10" font-weight="700" fill="#1c1208">👑 KING</text>
+  <text x="240" y="295" text-anchor="middle" font-size="11" font-weight="700" fill="#2e8b57">🕍 PRIEST</text>
+  <text x="240" y="312" text-anchor="middle" font-size="10" fill="#2e8b57">(serves &amp; guards the garden-temple)</text>
+  <!-- Tree of Life -->
+  <circle cx="380" cy="240" r="20" fill="#2e8b57" opacity=".7"/>
+  <rect x="378" y="258" width="5" height="20" rx="2" fill="#7c5c00"/>
+  <circle cx="380" cy="222" r="14" fill="#1a5c2e" opacity=".9"/>
+  <text x="380" y="295" text-anchor="middle" font-size="9" fill="#1a5c2e" font-weight="700">🌳 TREE OF LIFE</text>
+  <!-- River -->
+  <path d="M240 310 Q200 330 160 320 Q120 310 80 325" fill="none" stroke="#2196f3" stroke-width="3" opacity=".6"/>
+  <path d="M240 310 Q280 330 320 320 Q360 310 400 325" fill="none" stroke="#2196f3" stroke-width="3" opacity=".6"/>
+  <text x="240" y="330" text-anchor="middle" font-size="9" fill="#1565c0" font-weight="700">🏔️ MOUNT EDEN · Rivers flow outward from the highest point</text>
+</svg>`,cap:'Adam: Son of God (radiant face), King (crown), Priest (stole), Prophet (scroll), Bridegroom (ring). The five roles that define the meaning of every human life.'},
+  {t:'cards',l:'The Five Roles — And What They Mean For You',items:[
+    {ic:'👑',ti:'KING — Rule Yourself First',bd:'Jesus was unimpressed with Pontius Pilate\'s power. Real kingship is ruling yourself — over sin, over Satan, over your own passions. You can\'t call yourself a king until you can say no to yourself. "If the Son makes you free, you will be free indeed" (Jn 8:36).'},
+    {ic:'🕯️',ti:'PRIEST — Your Life Is the Sacrifice',bd:'St. Paul: "Present your bodies as a living sacrifice, holy and acceptable to God" (Rom 12:1). At every Mass when we bring forward the gifts, we bring forward our lives. The priest takes our bread-and-wine-lives and unites them to the great Sacrifice. We need our priests. Our priests need us.'},
+    {ic:'📣',ti:'PROPHET — Speak the Word',bd:'A prophet\'s first job isn\'t predicting the future — it\'s explaining what God wants people to do. Every time you share a truth from God with your child, your spouse, your friend, a stranger on a bus — you are a prophet. Baptism made you one.'},
+    {ic:'💍',ti:'BRIDEGROOM/BRIDE — Communion',bd:'Each of us is made for a relationship with another Person — spelled with a capital P. That Person is Jesus Christ. Holy marriage on earth is a beautiful sign of this, but only a sign. The real deal comes in the full communion of heaven. "No eye has seen what God has prepared for those who love him" (1 Cor 2:9).'},
+    {ic:'✨',ti:'SON/DAUGHTER — Divine Filiation',bd:'The technical term is divine filiation — being a child of God. Adam was the first. Jesus is the "last Adam" (1 Cor 15:45). Through baptism, each one of us gets the Adamic "shine" back. We become children of God again. That\'s the whole story of the Bible in one sentence.'},
+  ]},
+  {t:'vat',tx:`<strong>Vatican II, Lumen Gentium §11:</strong> "The Eucharist is the source and summit of the Christian life" — John Paul II amplified this in <em>Ecclesia de Eucharistia</em>. The Catechism teaches that through Baptism, all Christians share in Christ's priestly, prophetic, and royal identity (CCC §§901–913). These are not metaphors. They are the ongoing fulfilment of what Adam held and lost.`},
+ ]},
 
-        <!-- Chapter 3 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter3-art">
-                 <div class="artwork-title">The Golden Thread of Promise</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter Three</span>
-                <h3>Gathering the Key Fragments</h3>
-                <h4>The Abrahamic Covenant</h4>
-                <p><strong>New Perspective:</strong> The Foundation for the Gold. Before applying the golden lacquer, you must carefully select the key pieces. This is a precision task, focusing on one crucial fragment that will anchor all others.</p>
-                <p><strong>Explanation:</strong> God selects Abraham as the foundational piece for His restoration. The binding of Isaac on Mount Moriah proves this "fragment" is strong enough to bear the weight of the entire restoration. God's oath is the moment He commits to using this lineage to channel His golden, divine blessing to the world.</p>
-            </div>
-        </section>
+/* ===================== C2: NOAH ===================== */
+{id:'c2',num:'Chapter Two',icon:'🌊',
+ nm:'Washing Up and Starting Over',sb:'The Covenant with Noah',
+ c:'#1a3a5c',dk:'#0a1e38',pl:'#e3eef8',
+ tags:['Genesis 3–9','The Fall','The Flood','Noah','Rainbow Covenant','New Adam'],
+ prev:'After the highpoint of Eden comes the low point of the Fall. But God doesn\'t give up on his project. He washes the world clean and starts again. Sound familiar? It should — we do it every time someone gets baptized.',
+ ct:[
+  {t:'prose',l:'The Fall — What Actually Went Wrong',tx:`<p>At the beginning of Genesis 3, a snake shows up. And snakes are almost never a good thing in the Old Testament. This one immediately begins casting doubt on the trustworthiness of God and his word: "Did God <em>really</em> say. . .?" The snake's basic message is this: "You can't trust God as your loving Father. His rules aren't for your good. He just doesn't want you to experience the kind of life he enjoys."</p><p>Eve buys this line. Adam — who seems to have been standing right there the whole time, doing nothing — also eats. Notice Adam's brilliant response when God tracks them down: "The woman <em>whom you gave me</em>, she gave me the fruit and I ate." Middle management has been using this manoeuvre ever since — pass the buck both up and down the chain of command simultaneously.</p><p>God doesn't have many options here. A son who distrusts his Father and joins up with his Father's enemies can't stay living in the family home. A priest who doesn't have faith in the words of his God can't stay serving in the temple. God clothes them in skins — which required the death of an animal. The first lamb dies so that Adam and Eve may be clothed. This is foreshadowing, in neon lights.</p>`},
+  {t:'bergsma',tx:`The cherub is stationed on the east side of Eden, not north, south, or west. Why only east? Ancient readers would have known: the temple had only one entrance, facing east. The whole rest of the Bible, from Genesis 3 to Revelation 22, is the long story of how humanity finds its way back to that east gate.`,cite:'Bergsma on Genesis 3'},
+  {t:'diag',l:'The Flood as Re-Creation — and Mount Ararat',svg:`<svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87ceeb"/>
+      <stop offset="60%" stop-color="#b3e5fc"/>
+      <stop offset="100%" stop-color="#4fc3f7" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="flood-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1565c0" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <linearGradient id="mt-ararat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="40%" stop-color="#90a4ae"/>
+      <stop offset="100%" stop-color="#4e6766"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="560" height="340" fill="url(#sky2)"/>
+  <!-- Rainbow -->
+  <path d="M60,280 Q280,80 500,280" fill="none" stroke="#e53935" stroke-width="7" opacity=".7"/>
+  <path d="M70,280 Q280,98 490,280" fill="none" stroke="#fb8c00" stroke-width="6" opacity=".7"/>
+  <path d="M82,280 Q280,116 478,280" fill="none" stroke="#fdd835" stroke-width="5" opacity=".7"/>
+  <path d="M94,280 Q280,133 466,280" fill="none" stroke="#43a047" stroke-width="5" opacity=".7"/>
+  <path d="M106,280 Q280,148 454,280" fill="none" stroke="#1e88e5" stroke-width="4" opacity=".7"/>
+  <path d="M118,280 Q280,162 442,280" fill="none" stroke="#8e24aa" stroke-width="4" opacity=".7"/>
+  <!-- Water -->
+  <rect x="0" y="268" width="560" height="72" fill="url(#flood-grad)" opacity=".6"/>
+  <path d="M0 268 Q70 258 140 268 Q210 278 280 268 Q350 258 420 268 Q490 278 560 268" fill="none" stroke="#90caf9" stroke-width="2"/>
+  <!-- Mount Ararat -->
+  <polygon points="240,268 310,120 380,268" fill="url(#mt-ararat)" stroke="#90a4ae" stroke-width="1.5"/>
+  <!-- Snow cap -->
+  <polygon points="285,148 310,120 335,148 322,152 310,145 298,152" fill="white" opacity=".9"/>
+  <!-- The Ark -->
+  <rect x="265" y="230" width="95" height="32" rx="8" fill="#8d6e63" stroke="#5d4037" stroke-width="2"/>
+  <rect x="280" y="218" width="65" height="14" rx="4" fill="#a1887f"/>
+  <!-- Door of ark open, giraffe poking out -->
+  <rect x="315" y="214" width="12" height="18" rx="2" fill="#4e342e"/>
+  <text x="326" y="212" font-size="16">🦒</text>
+  <!-- Dove with olive branch -->
+  <text x="200" y="170" font-size="20">🕊️</text>
+  <text x="195" y="192" font-size="9" font-weight="700" fill="#1565c0">Olive branch!</text>
+  <!-- Noah on mountain with altar -->
+  <text x="240" y="235" font-size="16">🧔</text>
+  <!-- Altar -->
+  <rect x="225" y="248" width="30" height="14" rx="3" fill="#795548" opacity=".9"/>
+  <path d="M230,248 Q240,232 250,248" fill="none" stroke="#ef6c00" stroke-width="3" opacity=".8"/>
+  <text x="240" y="258" font-size="8" font-weight="700" fill="#fff">ALTAR</text>
+  <!-- Labels -->
+  <text x="280" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1565c0" letter-spacing="1" font-family="'Cinzel Decorative',serif">THE COVENANT WITH NOAH</text>
+  <text x="130" y="220" text-anchor="middle" font-size="11" font-weight="700" fill="#1565c0">🌈 SIGN OF THE COVENANT</text>
+  <text x="130" y="236" text-anchor="middle" font-size="10" fill="#1565c0">"I set my bow in the cloud"</text>
+  <text x="130" y="250" text-anchor="middle" font-size="10" fill="#1565c0">Genesis 9:13</text>
+  <text x="430" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="#1a3a5c">🏔️ MT. ARARAT</text>
+  <text x="430" y="206" text-anchor="middle" font-size="10" fill="#1a3a5c">New Mountain of God</text>
+  <text x="430" y="222" text-anchor="middle" font-size="10" fill="#1a3a5c">Noah = New Adam</text>
+  <text x="280" y="320" text-anchor="middle" font-size="10" fill="#0d47a1" font-weight="600">"Be fruitful and multiply" — same words as Adam. Noah is a second beginning.</text>
+</svg>`,cap:'Mount Ararat: the Ark lands on a new Mountain of God. Noah offers sacrifice, God smells the aroma of covenant love, and the rainbow is the sign of the Noahic Covenant.'},
+  {t:'prose',l:'Noah — The New Adam, But Not Quite',tx:`<p>When Noah disembarks from the ark, God speaks to him using almost the exact words he used to Adam: "Be fruitful and multiply and fill the earth." Noah is a new Adam, starting fresh. The flood was a re-creation — the world returned to "tohu wabohu," the Spirit (wind) moved over the waters again, then dry land emerged. Sound familiar? It's Genesis 1 all over again.</p><p>The only problem is that the line between good people and bad people doesn't run cleanly between groups of people. It runs right down the middle of each human heart. As St. Paul puts it: "All have sinned and fallen short of the glory of God" (Rom 3:23). Even Noah.</p><p>Sure enough, Genesis 9 gives us the fall of the new Adam. Noah gets drunk on wine from his vineyard, and "nakedness, shame, and curse" come tumbling back — the same themes as the Fall in Eden. The flood washed away all the bad people. But it couldn't wash sin out of the good ones.</p>`},
+  {t:'cards',l:'The Four Parallels — Genesis 1 and the Flood',items:[
+    {ic:'🌊',ti:'Chaos Before Creation',bd:'Genesis 1:2 — "the earth was formless and void, and darkness was over the face of the waters." Genesis 8:1 — the same wind (Spirit) moves over the waters. The flood is a deliberate re-play of creation. God has pressed the reset button.'},
+    {ic:'🏔️',ti:'Dry Land Appears',bd:'Just as God pulled dry land from the waters on Day Three of creation, so now the dry land of Ararat re-emerges after 150 days of flood. A new world, scrubbed clean, waits for a new humanity.'},
+    {ic:'🧔',ti:'New Adam',bd:'"Be fruitful and multiply, and fill the earth" (Gen 9:1) — identical to God\'s command to Adam in Genesis 1:28. Noah is given dominion over the animals just as Adam was. The Noahic Covenant is a renewal of the Adamic Covenant. God is not giving up on his original plan.'},
+    {ic:'🌈',ti:'The Sign',bd:'Every covenant has a sign. Adam\'s sign was the Sabbath rest. Noah\'s sign is the rainbow — God\'s bow laid down in the cloud. In the ancient world, a warrior who put down his bow was declaring peace. God is declaring peace with all creation. The whole universe is party to this covenant.'},
+  ]},
+  {t:'vat',tx:`<strong>CCC §71:</strong> "God makes an everlasting covenant with Noah and through him with all the creatures. It will remain in force as long as the world lasts." The covenant with Noah is remarkable in scope: it covers not just humans but "every living creature." God cares about his whole creation — a truth the Church has developed in <em>Laudato Si</em> and the tradition of integral ecology.`},
+ ]},
 
-        <!-- Chapter 4 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter4-art">
-                 <div class="artwork-title">The Covenant Performance Chart</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter Four</span>
-                <h3>Structuring the Repair</h3>
-                <h4>The Mosaic Covenant</h4>
-                <p><strong>New Perspective:</strong> The Scaffolding and the Workshop Rules. The restoration is underway. God provides a structure to hold the pieces together and posts workshop rules to keep the artisans focused.</p>
-                <p><strong>Explanation:</strong> On Mount Sinai, God erects the "scaffolding" of the covenant to shape Israel into a priestly people. The Ten Commandments are the "workshop rules." But the workers immediately make a mess (the Golden Calf), showing they can't follow the rules, and requiring more laws to be added because of their weakness.</p>
-            </div>
-        </section>
+/* ===================== C3: ABRAHAM ===================== */
+{id:'c3',num:'Chapter Three',icon:'⭐',
+ nm:'A New Hope',sb:'The Covenant with Abraham',
+ c:'#7c2d12',dk:'#4a1500',pl:'#fdf0ed',
+ tags:['Genesis 12–22','Three Promises','Covenant of Pieces','Circumcision','Mount Moriah','Isaac as Type of Christ'],
+ prev:'After Noah\'s fall, humanity crashes to a new low at the Tower of Babel. Then God makes a decisive move that will permanently change everything. He picks one man from what is now Iraq. His name is Abram.',
+ ct:[
+  {t:'prose',l:'Three Promises to Abram — and Why He Gets Them',tx:`<p>Genesis 12:1–3. God appears to Abram out of almost nowhere and gives him a three-part promise: (1) a <strong>great nation</strong>, (2) a <strong>great name</strong>, and (3) universal <strong>blessing to all families of the earth</strong>. What's interesting is what <em>isn't</em> said: we don't get Abram's résumé. We don't know why God chose him. The story is told as if we're already in the middle of it. Trust him on that.</p><p>These three promises are given at first as simple promises. But later in the story, God is going to work each one into a formal covenant. The difference between a promise and a covenant is like the difference between an engagement ring and a wedding ring. One is a strong hope. The other is an unbreakable commitment.</p>`},
+  {t:'bergsma',tx:`"In you, Abram, all the families of the earth will be blessed." People think the Old Testament is a Jewish book about salvation for Jews. Not true. The whole reason the Jews are special is because their ancestor Abram was chosen to bring blessing to EVERYONE. The Old Testament is a book about salvation for all human beings. That's always been God's mission.`,cite:'Bergsma on Genesis 12'},
+  {t:'diag',l:'The Three Covenants of Abraham — Genesis 15, 17, and 22',svg:`<svg viewBox="0 0 580 370" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="night-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0018"/>
+      <stop offset="100%" stop-color="#1a0a3a"/>
+    </linearGradient>
+    <linearGradient id="fire-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#ef6c00"/>
+    </linearGradient>
+  </defs>
+  <!-- GENESIS 15 panel -->
+  <rect x="10" y="40" width="170" height="290" rx="10" fill="url(#night-sky)"/>
+  <text x="95" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#ffd54f" font-family="'Cinzel Decorative',serif">GENESIS 15</text>
+  <text x="95" y="85" text-anchor="middle" font-size="9" fill="#a78bfa">The Covenant of the Pieces</text>
+  <!-- Stars -->
+  <text x="30" y="110" font-size="8" fill="#fff">★</text>
+  <text x="55" y="98" font-size="8" fill="#fff">★</text>
+  <text x="80" y="105" font-size="6" fill="#fff">·</text>
+  <text x="110" y="96" font-size="8" fill="#fff">★</text>
+  <text x="140" y="108" font-size="6" fill="#fff">★</text>
+  <text x="160" y="100" font-size="6" fill="#fff">·</text>
+  <!-- Cut animals -->
+  <rect x="25" y="195" width="25" height="60" rx="4" fill="#8d6e63"/>
+  <rect x="57" y="195" width="25" height="60" rx="4" fill="#a1887f"/>
+  <rect x="89" y="195" width="25" height="60" rx="4" fill="#8d6e63"/>
+  <rect x="121" y="195" width="25" height="60" rx="4" fill="#a1887f"/>
+  <rect x="153" y="195" width="20" height="60" rx="4" fill="#8d6e63"/>
+  <!-- Fire-pot moving between pieces -->
+  <ellipse cx="95" cy="175" rx="18" ry="12" fill="url(#fire-grad)" opacity=".9"/>
+  <path d="M82,172 Q95,155 108,172" fill="url(#fire-grad)" opacity=".7"/>
+  <text x="95" y="145" text-anchor="middle" font-size="9" fill="#ffd54f" font-weight="700">🔥 TORCH &amp; FIREPOT</text>
+  <text x="95" y="157" text-anchor="middle" font-size="8" fill="#ffd54f">"If I break this,</text>
+  <text x="95" y="169" text-anchor="middle" font-size="8" fill="#ffd54f">cut me like this!"</text>
+  <text x="95" y="295" text-anchor="middle" font-size="9" fill="#81c784" font-weight="700">Promise: LAND + NATION</text>
+  <text x="95" y="310" text-anchor="middle" font-size="8" fill="#81c784">(great nationhood)</text>
+  <!-- GENESIS 17 panel -->
+  <rect x="200" y="40" width="170" height="290" rx="10" fill="#f3e5d5"/>
+  <text x="285" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12" font-family="'Cinzel Decorative',serif">GENESIS 17</text>
+  <text x="285" y="85" text-anchor="middle" font-size="9" fill="#9e3a1a">The Covenant of Circumcision</text>
+  <!-- Big knife -->
+  <rect x="265" y="100" width="8" height="80" rx="3" fill="#bdbdbd" stroke="#757575" stroke-width="1.5"/>
+  <polygon points="261,100 273,100 269,85" fill="#9e9e9e" stroke="#616161" stroke-width="1"/>
+  <rect x="256" y="178" width="26" height="14" rx="4" fill="#8d6e63"/>
+  <text x="285" y="215" text-anchor="middle" font-size="9" fill="#7c2d12" font-weight="700">In Hebrew you don't</text>
+  <text x="285" y="230" text-anchor="middle" font-size="9" fill="#7c2d12">"make" a covenant —</text>
+  <text x="285" y="245" text-anchor="middle" font-size="9" fill="#7c2d12">you <strong>"CUT"</strong> one!</text>
+  <text x="285" y="265" text-anchor="middle" font-size="8" fill="#9e3a1a">Blood = family bond</text>
+  <text x="285" y="280" text-anchor="middle" font-size="8" fill="#9e3a1a">Blood = death oath</text>
+  <text x="285" y="295" text-anchor="middle" font-size="9" fill="#7c2d12" font-weight="700">Promise: GREAT NAME</text>
+  <text x="285" y="310" text-anchor="middle" font-size="8" fill="#7c2d12">(royalty, kings, empire)</text>
+  <!-- Name change arrow -->
+  <text x="285" y="145" text-anchor="middle" font-size="10" fill="#7c2d12">Abram → <tspan font-weight="700">Abraham</tspan></text>
+  <text x="285" y="162" text-anchor="middle" font-size="9" fill="#9e3a1a">"Father of Many Nations"</text>
+  <text x="285" y="178" text-anchor="middle" font-size="9" fill="#9e3a1a">Greater name = royal status</text>
+  <!-- GENESIS 22 panel -->
+  <rect x="390" y="40" width="175" height="290" rx="10" fill="linear-gradient"/>
+  <rect x="390" y="40" width="175" height="290" rx="10" fill="#fff3e0"/>
+  <text x="477" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12" font-family="'Cinzel Decorative',serif">GENESIS 22</text>
+  <text x="477" y="85" text-anchor="middle" font-size="9" fill="#e65100">The Akedah — Binding of Isaac</text>
+  <!-- Mount Moriah -->
+  <polygon points="420,270 477,120 535,270" fill="#795548" opacity=".8"/>
+  <polygon points="452,198 477,120 502,198" fill="#bcaaa4" opacity=".8"/>
+  <!-- Altar on top -->
+  <rect x="463" y="132" width="28" height="12" rx="3" fill="#8d6e63"/>
+  <!-- Isaac on altar -->
+  <ellipse cx="477" cy="128" rx="12" ry="8" fill="#f5c842" opacity=".9"/>
+  <text x="477" y="130" text-anchor="middle" font-size="8" fill="#1c1208">ISAAC</text>
+  <!-- Wood -->
+  <line x1="465" y1="133" x2="489" y2="133" stroke="#5d4037" stroke-width="2"/>
+  <!-- Abraham with knife raised -->
+  <text x="440" y="185" font-size="20">🧔</text>
+  <!-- Angel -->
+  <text x="505" y="148" font-size="18">👼</text>
+  <line x1="505" y1="160" x2="448" y2="168" stroke="#d4a017" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Ram in bushes -->
+  <text x="528" y="190" font-size="16">🐏</text>
+  <text x="477" y="295" text-anchor="middle" font-size="9" font-weight="700" fill="#e65100">Promise: UNIVERSAL BLESSING</text>
+  <text x="477" y="310" text-anchor="middle" font-size="8" fill="#e65100">"In your seed all nations blessed"</text>
+  <text x="477" y="322" text-anchor="middle" font-size="8" fill="#9e3a1a">= Jesus Christ</text>
+  <!-- Title -->
+  <text x="290" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#7c2d12" font-family="'Cinzel Decorative',serif" letter-spacing="1">THE THREE ABRAHAMIC COVENANTS</text>
+</svg>`,cap:'Three covenants sealed with three acts of cutting: the animals (Gen 15), circumcision (Gen 17), and the near-sacrifice of Isaac on Mount Moriah (Gen 22).'},
+  {t:'prose',l:'Genesis 22 — The Calvary of the Old Testament',tx:`<p>I tell my students: "Genesis 22 is the Calvary of the Old Testament." Here's what I mean. Isaac carries the wood of his own sacrifice up the mountain. He is the stronger of the two — there is no way an old Abraham could have overpowered a strapping teenager. Isaac has fully cooperated with his own sacrifice. He has entered "willingly into his passion." (That phrase, by the way, is from the old translation of Eucharistic Prayer II.)</p><p>St. John makes the connection explicit in John 3:16 — the most famous verse in the Bible. The Greek word for "only begotten" — <em>monogenēs</em> — is a direct translation of the Hebrew <em>yahid</em>, which appears three times in Genesis 22 to describe Isaac (vv. 2, 12, 16). John wants us to see: Jesus is the New Isaac.</p><p>But Jesus is greater than Isaac, because he goes through with it. And when he swears his great oath to Abraham — "By myself I have sworn. . . in your seed all the nations of the earth will be blessed" — God is swearing by himself because there is nothing greater by which he can swear (Hebrews 6:13). This is the covenant God makes when he is most serious about something.</p>`},
+  {t:'bergsma',tx:`"God will provide himself the lamb for the burnt offering, my son" — Abraham says this on the way up Mount Moriah. The day will come when God will, in fact, provide himself as the lamb. Jesus dies on a cross within sight of this very spot. "Where is the lamb?" Abraham asks. "Look, the Lamb of God who takes away the sin of the world!" John the Baptist answers, two thousand years later.`,cite:'Bergsma on Genesis 22 and John 1:29'},
+  {t:'vat',tx:`<strong>CCC §706:</strong> "Against all human hope, God promises descendants to Abraham, as the 'fruit of faith and of the Holy Spirit.' In Abraham's progeny all the nations of the earth will be blessed. This promise will be fulfilled in Isaac, whom Sarah will bear to Abraham in his old age. The promise is taken up and fulfilled through Isaac, Jacob, and then the twelve tribes." The Second Vatican Council affirmed in <em>Nostra Aetate</em> §4 the unique spiritual bond between Christians and the Jewish people, whose father Abraham is father to us all (Rom 4:11–12).`},
+ ]},
 
-        <!-- Chapter 5 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter5-art">
-                 <div class="artwork-title">The King's Hands</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter Five</span>
-                <h3>The Foreman of the Project</h3>
-                <h4>The Davidic Covenant</h4>
-                <p><strong>New Perspective:</strong> Appointing a Master Artisan. The workers have proven unreliable. The Divine Architect now appoints one man—a foreman—to oversee the project. The restoration is now entrusted to this foreman and his lineage.</p>
-                <p><strong>Explanation:</strong> God anoints David as king. The divine sonship and priesthood the nation rejected is now invested in him. God's covenant with David promises that his son will build the permanent workshop (the Temple) and that his royal line will be the channel for God's work forever.</p>
-            </div>
-        </section>
+/* ===================== C4: MOSES ===================== */
+{id:'c4',num:'Chapter Four',icon:'⚡',
+ nm:'God\'s Laws, Israel\'s Flaws',sb:'The Covenant Through Moses',
+ c:'#5a1a7a',dk:'#380080',pl:'#f5eaff',
+ tags:['Exodus','Ten Commandments','Sinai','Golden Calf','Royal Priesthood','Shining Face'],
+ prev:'Four hundred years of slavery in Egypt. A baby in a basket on the Nile. A burning bush that is not consumed. Ten plagues. A sea that parts. And then — the mountain that changes everything.',
+ ct:[
+  {t:'prose',l:'The Burning Bush — And the Secret of God\'s Name',tx:`<p>After forty years of herding sheep — the ancient equivalent of flipping burgers — Moses encounters a burning bush that is not consumed. God reveals the secret of his name: <em>YHWH</em> — "I AM WHO I AM," or perhaps better, "I WILL BE WHO I WILL BE." In almost all Catholic Bibles in English, whenever God's special name appears, you'll find <strong>LORD</strong> in small capitals. The name means the one God who actually exists. All other gods are not. God is.</p><p>God's commission to Moses is startling: "Say to Pharaoh, Israel is my first-born son" (Exodus 4:22). This reminds us of Adam, the first son of God. God is adopting the Israelites as a new humanity, a new Adam. They will get a fresh start — if they can stay faithful to their covenant.</p>`},
+  {t:'bergsma',tx:`The Israelites had been slaves for four hundred years in the world's dominant empire. They were, to put it bluntly, nobodies. God's plan? Take these nobodies, bring them to his mountain, and offer them something incredible: to be his "firstborn son," his "royal priesthood," his "holy nation." God offers them back everything Adam lost. The question is: will they accept it?`,cite:'Bergsma on Exodus 19'},
+  {t:'diag',l:'Mount Sinai — The Structure of the Mosaic Covenant',svg:`<svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="sinai-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a0a3a"/>
+      <stop offset="50%" stop-color="#311b92" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#4a1a7a" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="sinai-mt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0bec5"/>
+      <stop offset="100%" stop-color="#546e7a"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="560" height="380" fill="url(#sinai-sky)"/>
+  <!-- Storm clouds -->
+  <ellipse cx="280" cy="60" rx="120" ry="40" fill="#1a0a3a" opacity=".7"/>
+  <ellipse cx="200" cy="75" rx="80" ry="35" fill="#0d0026" opacity=".6"/>
+  <ellipse cx="360" cy="70" rx="100" ry="38" fill="#0d0026" opacity=".6"/>
+  <!-- Lightning bolts -->
+  <polyline points="250,95 240,130 255,130 244,165" fill="none" stroke="#ffd54f" stroke-width="3" opacity=".9"/>
+  <polyline points="310,90 305,125 318,125 312,158" fill="none" stroke="#ffd54f" stroke-width="3" opacity=".9"/>
+  <!-- Mount Sinai -->
+  <polygon points="160,360 280,110 400,360" fill="url(#sinai-mt)" stroke="#78909c" stroke-width="2"/>
+  <polygon points="240,230 280,110 320,230" fill="#eceff1" opacity=".8"/>
+  <!-- Moses at top with SHINING FACE -->
+  <circle cx="280" cy="128" r="14" fill="#f5c842" stroke="#d4a017" stroke-width="2.5"/>
+  <!-- Rays from Moses's face -->
+  <line x1="280" y1="112" x2="280" y2="104" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="292" y1="116" x2="299" y2="110" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="268" y1="116" x2="261" y2="110" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="296" y1="126" x2="304" y2="122" stroke="#ffd54f" stroke-width="2"/>
+  <line x1="264" y1="126" x2="256" y2="122" stroke="#ffd54f" stroke-width="2"/>
+  <!-- Two tablets -->
+  <rect x="250" y="145" width="25" height="34" rx="4" fill="#fffde7" stroke="#d4a017" stroke-width="2"/>
+  <path d="M255,152 Q262,144 270,152" fill="none" stroke="#d4a017" stroke-width="1.5"/>
+  <rect x="280" y="145" width="25" height="34" rx="4" fill="#fffde7" stroke="#d4a017" stroke-width="2"/>
+  <path d="M285,152 Q292,144 300,152" fill="none" stroke="#d4a017" stroke-width="1.5"/>
+  <!-- Text on tablets -->
+  <text x="260" y="164" text-anchor="middle" font-size="7" fill="#1a0a3a" font-weight="700">I–V</text>
+  <text x="292" y="164" text-anchor="middle" font-size="7" fill="#1a0a3a" font-weight="700">VI–X</text>
+  <!-- People at base -->
+  <text x="185" y="342" font-size="14">👨‍👩‍👧‍👦</text>
+  <text x="225" y="342" font-size="14">👨‍👩‍👧‍👦</text>
+  <text x="280" y="342" font-size="14">👨‍👩‍👧‍👦</text>
+  <text x="330" y="342" font-size="14">👨‍👩‍👧‍👦</text>
+  <text x="368" y="342" font-size="14">👨‍👩‍👧‍👦</text>
+  <!-- Golden Calf! -->
+  <text x="440" y="310" font-size="26">🐂</text>
+  <text x="430" y="335" text-anchor="middle" font-size="10" font-weight="700" fill="#e53935">⚠️ GOLDEN CALF</text>
+  <text x="430" y="350" text-anchor="middle" font-size="9" fill="#ef9a9a">While Moses is still</text>
+  <text x="430" y="364" text-anchor="middle" font-size="9" fill="#ef9a9a">on the mountain!</text>
+  <!-- Tabernacle at bottom left -->
+  <rect x="50" y="295" width="70" height="55" rx="4" fill="#8d6e63" opacity=".9"/>
+  <polygon points="50,295 85,270 120,295" fill="#a1887f"/>
+  <rect x="77" y="295" width="16" height="30" rx="2" fill="#f5c842" opacity=".7"/>
+  <text x="85" y="365" text-anchor="middle" font-size="9" font-weight="700" fill="#ffd54f">THE TABERNACLE</text>
+  <text x="85" y="378" text-anchor="middle" font-size="8" fill="#ffd54f">Portable temple</text>
+  <!-- Labels -->
+  <text x="280" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#e1bee7" font-family="'Cinzel Decorative',serif" letter-spacing="1">MOUNT SINAI</text>
+  <text x="280" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#ce93d8">⚡ THUNDER · LIGHTNING · THICK CLOUD ⚡</text>
+  <text x="280" y="185" text-anchor="middle" font-size="9" font-weight="700" fill="#fff">Exodus 19:6: "You shall be</text>
+  <text x="280" y="200" text-anchor="middle" font-size="9" fill="#fff">a ROYAL PRIESTHOOD,</text>
+  <text x="280" y="215" text-anchor="middle" font-size="9" fill="#ffd54f">a HOLY NATION to me"</text>
+</svg>`,cap:'Mount Sinai: Moses ascends with shining face, receives the Law on two tablets. The people at the base are already making a golden calf. The covenant is broken before Moses gets back down.'},
+  {t:'prose',l:'What God Offered Israel — and What They Did With It',tx:`<p>When God brings Israel to Sinai, he makes them an extraordinary offer: "You shall be to me a royal priesthood and a holy nation" (Exodus 19:6 — and note, the Greek translation and 1 Peter 2:9 render this as "royal priesthood"). God is offering Israel everything Adam lost. Sonship. Priesthood. Kingship. The whole package.</p><p>What does Israel do? While Moses is still on the mountain receiving the law — they make a golden calf. They literally cannot wait forty days to start worshipping an idol. The covenant is broken before Moses even gets back down the mountain.</p><p>Something remarkable happens then: God's anger burns against Israel, but Moses intercedes for them, arguing that God's own reputation is at stake among the nations. God relents. The covenant is remade — but in a diminished form. The second Sinai covenant is a patched-up affair. The Book of Deuteronomy is the final edition — a covenant with more warnings, more curses, more acknowledgment that the people's hearts are not fully in it.</p><p>The sign of this covenant was the shining face of Moses. When he came down from Sinai after speaking with God, his face shone with a light so bright that the Israelites made him put a veil over it. Jerome famously mistranslated the Hebrew word for "rays of light" as "horns" — which is why Michelangelo's Moses has horns. St. Paul uses Moses's shining face in 2 Corinthians 3 to make a stunning argument: if the ministry of condemnation had such glory, how much more the ministry of the Spirit?</p>`},
+  {t:'cards',l:'The Structure of the Mosaic Covenant',items:[
+    {ic:'📜',ti:'The Decalogue',bd:'The Ten Commandments — the core of the Mosaic Covenant, written by God himself on two stone tablets. The first five concern our relationship with God. The second five concern our relationships with each other. Jesus will summarise both as "Love God" and "Love your neighbour."'},
+    {ic:'⛺',ti:'The Tabernacle',bd:'The portable temple Moses builds in the wilderness according to the exact design God gives on the mountain. Every detail reminds the Israelites of Eden: gold, precious stones, flower motifs, a menorah shaped like a tree of life. The tabernacle is a portable Eden.'},
+    {ic:'👨‍💼',ti:'The Levitical Priesthood',bd:'Because Israel rejected the covenant at the Golden Calf and could not be a "royal priesthood" as a whole, one tribe — Levi — is set apart for priestly service. The rest of Israel will get trickle-down benefits. This is a narrowing of the promise.'},
+    {ic:'✨',ti:'The Shining Face',bd:'Moses comes down from Sinai with a face so radiant that the Israelites make him wear a veil. The sign of his mediation is shining — the same "filial shine" that Adam had as son of God. The Mosaic covenant is still connected to the original promise.'},
+    {ic:'⚡',ti:'Blessings and Curses',bd:'Unlike the Adamic and Noahic covenants, the Mosaic is conditional. Deuteronomy 28 lists blessings for obedience and curses for disobedience — exile, famine, defeat. The prophets will later explain Israel\'s exile as the curses of Deuteronomy 28 coming true.'},
+  ]},
+  {t:'vat',tx:`<strong>Dei Verbum §3:</strong> "God, with care for all peoples, desired to give eternal life to all those who seek salvation by patience in well-doing. He did not abandon men after their sin but ceaselessly offered them helps to salvation, in anticipation of Christ the Redeemer." The Mosaic Covenant, even in its patched-up form, was a genuine act of God's faithful love. St. Paul calls the Law "our pedagogue" — our teacher leading us to Christ (Galatians 3:24).`},
+ ]},
 
-        <!-- Chapter 6 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter6-art">
-                 <div class="artwork-title">The Prophetic Vision</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter Six</span>
-                <h3>The Project Stalls, The Vision Endures</h3>
-                <h4>The New Covenant</h4>
-                <p><strong>New Perspective:</strong> A Worksite Abandoned, but the Blueprint is Rediscovered. The foreman's successors fail. The workshop is destroyed. But then, prophets arise who have rediscovered the original blueprint and promise the Master Architect will return to finish the job Himself.</p>
-                <p><strong>Explanation:</strong> The kingdom collapses and the people are exiled. All seems lost. But prophets like Isaiah, Jeremiah, and Ezekiel speak of a "New Covenant" where God Himself will intervene. They are promising that the Kintsugi Master is coming to apply the golden lacquer personally.</p>
-            </div>
-        </section>
+/* ===================== C5: DAVID ===================== */
+{id:'c5',num:'Chapter Five',icon:'🌟',
+ nm:'Once and Future King',sb:'The Covenant of David',
+ c:'#b8860b',dk:'#7c5c00',pl:'#fdf8e8',
+ tags:['2 Samuel 7','Jerusalem','Temple','Son of David','Psalm 110','Melchizedek Priest','Eternal Throne'],
+ prev:'Five hundred years pass. Judges come and go. Then God chooses a shepherd boy from Bethlehem — the eighth son of Jesse, still smelling of sheep — to be the most important man in the Old Testament.',
+ ct:[
+  {t:'prose',l:'Why David Is the Central Figure of the Whole Old Testament',tx:`<p>Moses is mentioned about 800 times in the Catholic Old Testament, mostly in the first six books. After that, he appears only occasionally. David is mentioned zero times in the first seven books. But from Ruth onward? It's no contest: David is mentioned well over a thousand times. I tell my students: "Genesis through Joshua is the Moses Channel. From Ruth to the end of the Old Testament, it switches to The David Channel: All David, All the Time."</p><p>Why? Because the Davidic Covenant is the one that all the prophets are waiting for. The prophets promise David's kingdom will come again. The Psalms speak from David's heart. The wisdom literature flows from Solomon, David's son. And Jesus himself is called "Son of David" more than any other title in the gospels.</p><p>David's importance is three-fold: <strong>political</strong> (he unified the twelve tribes, made Jerusalem the capital, built an empire), <strong>liturgical</strong> (he introduced singing and music into worship — yes, all those psalms and hymns at Mass go back to David), and <strong>eschatological</strong> (he pointed forward to Christ).</p>`},
+  {t:'bergsma',tx:`"The word of the Lord came to Nathan: Go and tell my servant David... I will make you a house. When your days are fulfilled... I will raise up your seed after you. I will be his father, and he shall be my son. And your house and your kingdom shall be made sure forever; your throne shall be established forever." — 2 Samuel 7. There is no other place in the Old Testament where God promises a human being something that lasts "forever." Three times! Forever. This is the Big One.`,cite:'Bergsma on 2 Samuel 7'},
+  {t:'diag',l:'Mount Zion — David\'s Mountain and the Temple',svg:`<svg viewBox="0 0 580 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="zion-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="60%" stop-color="#ffe082"/>
+      <stop offset="100%" stop-color="#ff8f00" stop-opacity=".4"/>
+    </linearGradient>
+    <linearGradient id="zion-mt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c96a"/>
+      <stop offset="100%" stop-color="#8d6e63"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="580" height="380" fill="url(#zion-sky)"/>
+  <!-- Sun / divine glory -->
+  <circle cx="290" cy="40" r="35" fill="#ffd54f" opacity=".6"/>
+  <circle cx="290" cy="40" r="20" fill="#ffd54f" opacity=".9"/>
+  <!-- Rays -->
+  <line x1="290" y1="0" x2="290" y2="-10" stroke="#ffd54f" stroke-width="3" opacity=".8"/>
+  <line x1="316" y1="8" x2="322" y2="2" stroke="#ffd54f" stroke-width="2.5" opacity=".8"/>
+  <line x1="264" y1="8" x2="258" y2="2" stroke="#ffd54f" stroke-width="2.5" opacity=".8"/>
+  <line x1="328" y1="30" x2="338" y2="26" stroke="#ffd54f" stroke-width="2.5" opacity=".7"/>
+  <line x1="252" y1="30" x2="242" y2="26" stroke="#ffd54f" stroke-width="2.5" opacity=".7"/>
+  <!-- Mount Zion -->
+  <polygon points="100,380 290,160 480,380" fill="url(#zion-mt)" stroke="#a1887f" stroke-width="2"/>
+  <!-- Jerusalem city at base -->
+  <rect x="130" y="320" width="320" height="60" fill="#d7ccc8" stroke="#a1887f" stroke-width="1"/>
+  <!-- City walls -->
+  <rect x="130" y="315" width="4" height="65" fill="#8d6e63"/>
+  <rect x="446" y="315" width="4" height="65" fill="#8d6e63"/>
+  <rect x="130" y="305" width="320" height="12" fill="#8d6e63"/>
+  <!-- Battlements -->
+  <rect x="140" y="295" width="10" height="12" fill="#8d6e63"/>
+  <rect x="162" y="295" width="10" height="12" fill="#8d6e63"/>
+  <rect x="184" y="295" width="10" height="12" fill="#8d6e63"/>
+  <rect x="390" y="295" width="10" height="12" fill="#8d6e63"/>
+  <rect x="412" y="295" width="10" height="12" fill="#8d6e63"/>
+  <rect x="434" y="295" width="10" height="12" fill="#8d6e63"/>
+  <!-- TEMPLE on terrace -->
+  <rect x="220" y="205" width="140" height="80" rx="4" fill="#d4a017" stroke="#b8860b" stroke-width="2"/>
+  <!-- Temple columns -->
+  <rect x="228" y="208" width="8" height="76" rx="2" fill="#f0c040" opacity=".8"/>
+  <rect x="246" y="208" width="8" height="76" rx="2" fill="#f0c040" opacity=".8"/>
+  <rect x="344" y="208" width="8" height="76" rx="2" fill="#f0c040" opacity=".8"/>
+  <rect x="326" y="208" width="8" height="76" rx="2" fill="#f0c040" opacity=".8"/>
+  <!-- Temple roof -->
+  <rect x="215" y="196" width="150" height="12" rx="3" fill="#d4a017"/>
+  <!-- Star of David -->
+  <polygon points="290,216 297,230 311,230 300,240 305,254 290,246 275,254 280,240 269,230 283,230" fill="none" stroke="#1c1208" stroke-width="2" opacity=".7"/>
+  <!-- Ark inside (visible) -->
+  <rect x="272" y="242" width="36" height="26" rx="4" fill="#f5c842" stroke="#d4a017" stroke-width="2"/>
+  <text x="290" y="258" text-anchor="middle" font-size="8" font-weight="700" fill="#1c1208">ARK</text>
+  <!-- David at base of mountain with crown + harp -->
+  <circle cx="180" cy="248" r="14" fill="#f5c842" stroke="#d4a017" stroke-width="2"/>
+  <!-- Crown on David -->
+  <polygon points="168,236 174,225 180,234 186,223 192,234 195,236" fill="#d4a017" stroke="#b8860b" stroke-width="1.5"/>
+  <!-- Harp -->
+  <path d="M155,256 Q148,240 158,232 Q168,225 172,240" fill="none" stroke="#d4a017" stroke-width="2.5"/>
+  <line x1="158" y1="232" x2="155" y2="256" stroke="#d4a017" stroke-width="2.5"/>
+  <line x1="163" y1="244" x2="162" y2="256" stroke="#a1887f" stroke-width="1.5"/>
+  <line x1="166" y1="242" x2="165" y2="256" stroke="#a1887f" stroke-width="1.5"/>
+  <line x1="169" y1="241" x2="168" y2="256" stroke="#a1887f" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="290" y="20" text-anchor="middle" font-size="13" font-weight="700" fill="#7c5c00" font-family="'Cinzel Decorative',serif" letter-spacing="1">MOUNT ZION &amp; THE DAVIDIC COVENANT</text>
+  <text x="100" y="250" text-anchor="end" font-size="10" font-weight="700" fill="#7c5c00">🎵 DAVID</text>
+  <text x="100" y="264" text-anchor="end" font-size="9" fill="#9e7c18">"Sweet singer</text>
+  <text x="100" y="278" text-anchor="end" font-size="9" fill="#9e7c18">of Israel"</text>
+  <text x="480" y="230" font-size="10" font-weight="700" fill="#7c5c00">THE TEMPLE</text>
+  <text x="480" y="246" font-size="9" fill="#9e7c18">2 Sam 7:13</text>
+  <text x="480" y="262" font-size="9" fill="#9e7c18">"He shall build</text>
+  <text x="480" y="278" font-size="9" fill="#9e7c18">a house for</text>
+  <text x="480" y="294" font-size="9" fill="#9e7c18">my name"</text>
+  <text x="290" y="360" text-anchor="middle" font-size="11" font-weight="700" fill="#7c5c00">⭐ JERUSALEM — "City of David" — David's greatest political stroke ⭐</text>
+</svg>`,cap:'Mount Zion: David\'s mountain, the Temple terrace, and the Ark of the Covenant inside. "Your throne shall be established forever" — three times God says "forever" in 2 Samuel 7.'},
+  {t:'prose',l:'David\'s Four Roles — The Accumulation of All Previous Covenants',tx:`<p>David looks strikingly like Adam. This is not accidental. David is a new Adam, embodying all the roles Adam had. Let me walk through them:</p><p><strong>Son of God:</strong> Psalm 89 calls David God's firstborn: "He shall cry to me, 'You are my Father'... I will make him the firstborn, the highest of the kings of the earth." The shine is back. <strong>King:</strong> Obviously — he's king of all twelve tribes and beyond, building an empire. <strong>Priest:</strong> Psalm 110 says of David, "You are a priest forever after the order of Melchizedek." Melchizedek was the priest-king of Salem (= Jerusalem) in Abraham's time. When David conquers Jerusalem, he inherits Melchizedek's priestly office. That's why we see David wearing priestly robes, offering sacrifice, and blessing the people. <strong>Prophet:</strong> "The Spirit of the Lord speaks by me, his word is upon my tongue" (2 Sam 23:2). Many of David's Psalms are prophecies — especially Psalm 22, which is so detailed in its description of crucifixion that it reads like an eyewitness account. <strong>Bridegroom:</strong> When the elders of Israel come to make David king, they say, "Behold, we are your bone and flesh" — the only other place in the Bible where this phrase appears in a covenant context is Genesis 2, when Adam looks at Eve.</p>`},
+  {t:'cards',l:'The Davidic Covenant — The Most Important Single Covenant in the Old Testament',items:[
+    {ic:'🏛️',ti:'The Temple Promise',bd:'David wants to build God a "house" (temple). God reverses it: "I will build you a house" — meaning a dynasty. The wordplay is the whole point. Human generosity to God is always answered with divine generosity a hundred times greater.'},
+    {ic:'👶',ti:'The Son Promise',bd:'"I will be his father, and he shall be my son." This is the first time divine sonship has been promised since God said "Israel is my firstborn son" in Exodus 4:22. But Israel rejected it at the golden calf. Now the promise narrows to the king — and will ultimately focus on one perfect King.'},
+    {ic:'♾️',ti:'The Eternal Throne',bd:'"Your throne shall be established forever" — three times the word "forever" (olam) appears in this covenant. No other human covenant in the Old Testament promises anything that lasts forever. This is what every prophet is waiting for: the eternal Son of David.'},
+    {ic:'🕍',ti:'The Temple as Cosmic Summit',bd:'Solomon\'s Temple brings together all five previous covenants. Its decorations recall Eden (Adamic). It\'s built on three levels like Noah\'s Ark (Noahic). It\'s on Mount Moriah where Abraham offered Isaac (Abrahamic). It houses the Ark of Moses\'s Tabernacle (Mosaic). It was promised to David (Davidic). The Temple is the universe in miniature.'},
+  ]},
+  {t:'vat',tx:`<strong>CCC §436:</strong> "Jesus is the Christ, the Son of God. The divine title Christ literally means Anointed One. Christ comes from the Greek translation of the Hebrew word Messiah. Among the Israelites, prophets, priests, and kings were all consecrated through anointing. Jesus fulfills the messianic hope of Israel in his threefold office of priest, prophet, and king." The Davidic Covenant finds its definitive fulfilment only in Jesus — not in any of David's merely human descendants.`},
+ ]},
 
-        <!-- Chapter 7 -->
-        <section class="chapter-card">
-            <div class="chapter-image-container" id="chapter7-art">
-                 <div class="artwork-title">The Heart of the Masterpiece</div>
-            </div>
-            <div class="chapter-text-container">
-                <span class="chapter-number">Chapter Seven</span>
-                <h3>The Master Arrives</h3>
-                <h4>The Eucharistic Covenant</h4>
-                <p><strong>New Perspective:</strong> Kintsugi in Flesh and Blood. The Master Artisan arrives. He doesn't just bring the gold; He *is* the gold. He allows Himself to be broken to perfectly fill the cracks of the shattered masterpiece, making it whole and holy.</p>
-                <p><strong>Explanation:</strong> Jesus is the fulfillment of all promises. The Cross is the workbench. His own Body and Blood are the divine, golden lacquer. He is broken (the Crucifixion) and poured out (the Eucharist) to mend our brokenness. The river of blood and water from His side is the flow of the Holy Spirit, the golden lacquer that makes us children of God.</p>
-            </div>
-        </section>
+/* ===================== C6: PROPHETS ===================== */
+{id:'c6',num:'Chapter Six',icon:'🌤️',
+ nm:'Stormy Today, Sonny Tomorrow',sb:'The New Covenant in the Prophets',
+ c:'#1a4a6a',dk:'#0a2238',pl:'#eaf4fb',
+ tags:['Isaiah','Jeremiah 31','Ezekiel 36','New Covenant','Law on the Heart','Son of David','Isaiah 55'],
+ prev:'Solomon\'s temple is built. That\'s the high point of the Old Testament. Everything after that is downhill. The two kingdoms split, decline, and finally collapse into exile. But God sends three great prophets with an extraordinary message.',
+ ct:[
+  {t:'prose',l:'The Rise and Fall of Solomon — and What Came After',tx:`<p>Solomon starts brilliantly. God appears to him and offers him anything he wants. He asks for wisdom to be a good ruler. God grants that, plus the wealth and power he didn't ask for. This is the high point of the Old Testament: 1 Kings 8, the dedication of the Temple. Everything before this has been building toward it; everything after is its story of decline.</p><p>Toward the end of Solomon's life, his foreign wives persuade him to build shrines to their pagan gods. He begins to be unfaithful to the Lord. He also imposes crushing taxes. After Solomon dies, the ten northern tribes break away. Two kingdoms. Two separate declines. The northern kingdom falls to Assyria in 722 BC — ten tribes scattered and never heard from again. The southern kingdom falls to Babylon in 587 BC — the Temple destroyed, the people in exile.</p><p>What was God doing through all those hundreds of years of decline? He was sending prophets. The three great prophets — Isaiah, Jeremiah, Ezekiel — are like weather-forecasters who see nothing but storms in the short term but whose extended forecasts are full of sunshine. I call these the "Sonny days" — because what they predict is the coming of the Son of David, who will establish a New Covenant.</p>`},
+  {t:'diag',l:'The Three Prophets and Their New Covenant Visions',svg:`<svg viewBox="0 0 580 380" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1e38"/>
+      <stop offset="50%" stop-color="#1565c0" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#f57c00" stop-opacity=".5"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="580" height="380" fill="url(#dawn)"/>
+  <!-- Storm on left (short term) -->
+  <ellipse cx="100" cy="80" rx="90" ry="50" fill="#1a2a4a" opacity=".8"/>
+  <text x="50" y="70" font-size="18">⛈️</text>
+  <text x="82" y="66" font-size="18">⛈️</text>
+  <text x="120" y="74" font-size="18">⛈️</text>
+  <text x="100" y="108" text-anchor="middle" font-size="10" fill="#90caf9" font-weight="700">EXILE &amp; DESTRUCTION</text>
+  <text x="100" y="122" text-anchor="middle" font-size="9" fill="#90caf9">Curses of Deut 28</text>
+  <!-- Sun rising on right (long term) -->
+  <circle cx="490" cy="90" r="55" fill="#ffd54f" opacity=".35"/>
+  <circle cx="490" cy="90" r="35" fill="#ffd54f" opacity=".6"/>
+  <circle cx="490" cy="90" r="18" fill="#ffd54f" opacity=".9"/>
+  <text x="490" y="165" text-anchor="middle" font-size="10" fill="#ffd54f" font-weight="700">THE "SONNY" DAYS</text>
+  <text x="490" y="180" text-anchor="middle" font-size="9" fill="#ffe082">Son of David comes!</text>
+  <!-- Isaiah panel -->
+  <rect x="20" y="180" width="170" height="180" rx="10" fill="rgba(21,101,192,0.2)" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="105" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#e3f2fd" font-family="'Cinzel Decorative',serif">ISAIAH</text>
+  <text x="105" y="218" text-anchor="middle" font-size="9" fill="#90caf9">~740 BC</text>
+  <text x="105" y="238" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">📖 Is 9:6-7</text>
+  <text x="105" y="254" text-anchor="middle" font-size="9" fill="#e3f2fd">"For to us a child</text>
+  <text x="105" y="268" text-anchor="middle" font-size="9" fill="#e3f2fd">is born, a son given..."</text>
+  <text x="105" y="286" text-anchor="middle" font-size="9" fill="#ffd54f">"Wonderful Counselor,</text>
+  <text x="105" y="300" text-anchor="middle" font-size="9" fill="#ffd54f">Mighty God,</text>
+  <text x="105" y="314" text-anchor="middle" font-size="9" fill="#ffd54f">Everlasting Father,</text>
+  <text x="105" y="328" text-anchor="middle" font-size="9" fill="#ffd54f">Prince of Peace"</text>
+  <text x="105" y="348" text-anchor="middle" font-size="9" fill="#80cbc4">Is 42:6: "I give you</text>
+  <text x="105" y="362" text-anchor="middle" font-size="9" fill="#80cbc4">as a covenant to</text>
+  <!-- Jeremiah panel -->
+  <rect x="205" y="180" width="170" height="180" rx="10" fill="rgba(139,44,0,0.2)" stroke="#e65100" stroke-width="1.5"/>
+  <text x="290" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#fff3e0" font-family="'Cinzel Decorative',serif">JEREMIAH</text>
+  <text x="290" y="218" text-anchor="middle" font-size="9" fill="#ffccbc">~645 BC</text>
+  <text x="290" y="238" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">📖 Jer 31:31-34</text>
+  <text x="290" y="254" text-anchor="middle" font-size="9" fill="#ffe0b2">"Behold, the days are</text>
+  <text x="290" y="268" text-anchor="middle" font-size="9" fill="#ffe0b2">coming when I will make</text>
+  <text x="290" y="284" text-anchor="middle" font-size="9" fill="#ffd54f">a NEW COVENANT</text>
+  <text x="290" y="300" text-anchor="middle" font-size="9" fill="#ffe0b2">with the house of Israel..."</text>
+  <text x="290" y="320" text-anchor="middle" font-size="9" fill="#ffccbc">"I will put my law</text>
+  <text x="290" y="334" text-anchor="middle" font-size="9" fill="#ffccbc">within them, and write</text>
+  <text x="290" y="348" text-anchor="middle" font-size="9" fill="#ffccbc">it on their HEARTS"</text>
+  <text x="290" y="366" text-anchor="middle" font-size="9" fill="#ffd54f">Only OT use of "New Covenant"!</text>
+  <!-- Ezekiel panel -->
+  <rect x="390" y="180" width="170" height="180" rx="10" fill="rgba(27,94,32,0.2)" stroke="#43a047" stroke-width="1.5"/>
+  <text x="475" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#e8f5e9" font-family="'Cinzel Decorative',serif">EZEKIEL</text>
+  <text x="475" y="218" text-anchor="middle" font-size="9" fill="#a5d6a7">~590 BC</text>
+  <text x="475" y="238" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">📖 Ez 36:25-27</text>
+  <text x="475" y="254" text-anchor="middle" font-size="9" fill="#c8e6c9">"I will sprinkle clean</text>
+  <text x="475" y="268" text-anchor="middle" font-size="9" fill="#c8e6c9">water upon you..."</text>
+  <text x="475" y="286" text-anchor="middle" font-size="9" fill="#ffd54f">"A NEW HEART will</text>
+  <text x="475" y="300" text-anchor="middle" font-size="9" fill="#ffd54f">I give you, a new</text>
+  <text x="475" y="314" text-anchor="middle" font-size="9" fill="#ffd54f">SPIRIT within you"</text>
+  <text x="475" y="332" text-anchor="middle" font-size="9" fill="#c8e6c9">Ez 47: River of life</text>
+  <text x="475" y="346" text-anchor="middle" font-size="9" fill="#c8e6c9">flows from the new</text>
+  <text x="475" y="360" text-anchor="middle" font-size="9" fill="#c8e6c9">temple → the world</text>
+  <!-- Labels top -->
+  <text x="290" y="25" text-anchor="middle" font-size="13" font-weight="700" fill="#e3f2fd" font-family="'Cinzel Decorative',serif" letter-spacing="1">STORMY TODAY · SONNY TOMORROW</text>
+  <text x="290" y="50" text-anchor="middle" font-size="10" fill="#90caf9">The three great prophets see darkness now — but light ahead</text>
+  <path d="M180,130 Q290,150 380,130" fill="none" stroke="#ffd54f" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="290" y="152" text-anchor="middle" font-size="10" fill="#ffd54f" font-weight="700">→ All three point to the Same Event ←</text>
+</svg>`,cap:'Isaiah, Jeremiah, and Ezekiel each receive a different facet of the New Covenant vision: a new Son of David (Isaiah), law written on the heart (Jeremiah), a new Spirit poured out (Ezekiel).'},
+  {t:'scripture',tx:'"Behold, the days are coming, says the Lord, when I will make a New Covenant with the house of Israel and the house of Judah... I will put my law within them, and I will write it upon their hearts; and I will be their God, and they shall be my people... for I will forgive their iniquity, and I will remember their sin no more."',ref:'— Jeremiah 31:31–34. The only place in the entire Old Testament where the exact phrase "New Covenant" (berith hadasha) appears. When Jesus says at the Last Supper, "This cup is the new covenant in my blood," he is pulling a straight line back to this exact text.'},
+  {t:'prose',l:'Isaiah 55 — The Feast That Changes Everything',tx:`<p>There is one more passage in Isaiah we need to see, because it tells us exactly how this New Covenant will work and who will enter it:</p><p>"Ho, every one who thirsts, come to the waters; and he who has no money, come, buy and eat! Come, buy wine and milk without money and without price... Hearken diligently to me, and eat what is good... and I will make with you an everlasting covenant, my steadfast, sure love for David" (Isaiah 55:1–3).</p><p>God is talking to poor people. Hungry, thirsty people with no money. He's inviting them to a feast. And if they come to that feast, they enter into an everlasting covenant that is identified as "the covenant love of David" — the Davidic Covenant. In other words, the new covenant isn't a replacement for the Davidic. It IS the Davidic — only now opened up to everyone. Any poor, hungry, thirsty person who accepts the free meal gets the Davidic covenant.</p><p>Hmmm. A free meal. Poor and hungry people invited to a feast. The new covenant given through eating. I think I see where this is going.</p>`},
+  {t:'cards',l:'The Three New Covenant Visions — Fulfilled in Christ',items:[
+    {ic:'📯',ti:'Isaiah — The Servant Becomes the Covenant',bd:'"I have given you as a covenant to the people, a light to the nations" (Is 42:6). A person cannot be a covenant. Yet God says his servant will be one. This is the most astonishing prophecy of the entire Old Testament — that the New Covenant will not be a law or a ceremony but a person.'},
+    {ic:'❤️',ti:'Jeremiah — Interior Transformation',bd:'The Mosaic Law was external: carved on stone tablets. The New Covenant will be internal: written on hearts. This means a genuine interior change for those who enter it. Jer 31:34: "They shall all know me, from the least to the greatest." Universal access. No intermediaries needed.'},
+    {ic:'💧',ti:'Ezekiel — The New Spirit and the River of Life',bd:'"A new heart will I give you and a new spirit will I put within you" (Ez 36:26). Ezekiel also sees a river of life flowing from the new temple eastward — healing everything it touches (Ez 47). That river is the Holy Spirit, flowing from the wounds of Christ, given to us through the sacraments.'},
+  ]},
+ ]},
 
-    </main>
+/* ===================== C7: JESUS / EUCHARIST ===================== */
+{id:'c7',num:'Chapter Seven',icon:'✝️',
+ nm:'The Grand Finale',sb:'The Eucharistic Covenant of Jesus',
+ c:'#8b0000',dk:'#5a0000',pl:'#fff5f5',
+ tags:['Last Supper','Calvary','Eucharist','Pentecost','New Creation','Full Circle','Baptism'],
+ prev:'The prophets have pointed the way. Now the thing itself arrives. In an upper room in Jerusalem, on the night before Passover, a Jewish carpenter from Galilee does the most important thing anyone has ever done.',
+ ct:[
+  {t:'prose',l:'The Last Supper — This Is the Most Important Moment in Human History',tx:`<p>Let me be precise about what is happening in Luke 22:14–20. Jesus is celebrating the Passover with his twelve apostles — the same number as the twelve tribes of Israel. Just as Moses stood at Mount Sinai with the twelve tribes and ratified the Old Covenant with blood sprinkled on both God's altar and the people, Jesus stands at this new Mount Zion — the upper room, in Jerusalem — with his twelve and ratifies the New Covenant.</p><p>Jesus says, "This cup is the New Covenant in my blood." He's pulling a straight line back to Jeremiah 31:31 — the only place in the entire Old Testament that uses the phrase "New Covenant." "What Jeremiah predicted, I am doing right now." And when he says "in my blood" — consisting of my blood — he fulfils Isaiah 42:6: the servant becoming the covenant itself. The cup IS Jesus. Jesus IS the covenant.</p><p>Notice also what Jesus does not do at the Last Supper. A traditional Passover Seder had four cups of wine. In Luke's account, we can only see Jesus drinking the second and third cups. Then, according to Matthew and Mark, after singing the hymn they leave for the Mount of Olives — before drinking the fourth cup. Jesus has deliberately left the Passover incomplete.</p>`},
+  {t:'bergsma',tx:`In the Garden of Gethsemane, Jesus prays that "this cup may pass from me." The fourth cup. He knows what completing the Passover will cost. He goes through with it anyway. At the cross, a soldier offers him wine on a sponge. The first time Jesus refuses (Matthew 27:34). But the second time — after crying "I thirst" — he drinks. And says, "It is finished." The Passover is now complete. The fourth cup has been drunk — on the cross, at Calvary. The Last Supper and the Cross are one liturgical act.`,cite:'Bergsma on the Passover and the Cross'},
+  {t:'diag',l:'The Eucharistic Covenant — The Summit of All Seven Mountains',svg:`<svg viewBox="0 0 580 420" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="dark-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0000"/>
+      <stop offset="60%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#2a0808" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="calvary-mt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5d4037"/>
+      <stop offset="100%" stop-color="#3e2723"/>
+    </linearGradient>
+    <radialGradient id="blood-light" cx="55%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="#c62828" stop-opacity=".3"/>
+      <stop offset="100%" stop-color="#0a0000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="580" height="420" fill="url(#dark-sky)"/>
+  <rect x="0" y="0" width="580" height="420" fill="url(#blood-light)"/>
+  <!-- Three crosses / Calvary -->
+  <polygon points="150,380 290,100 430,380" fill="url(#calvary-mt)"/>
+  <!-- Large cross -->
+  <rect x="277" y="108" width="26" height="120" rx="4" fill="#8b0000"/>
+  <rect x="247" y="150" width="86" height="22" rx="4" fill="#8b0000"/>
+  <!-- Crown of thorns -->
+  <ellipse cx="290" cy="112" rx="20" ry="12" fill="none" stroke="#8d6e63" stroke-width="2" stroke-dasharray="3,2"/>
+  <!-- INRI sign -->
+  <rect x="268" y="110" width="44" height="14" rx="2" fill="#fffde7" opacity=".9"/>
+  <text x="290" y="121" text-anchor="middle" font-size="9" font-weight="700" fill="#1c1208">INRI</text>
+  <!-- Corpus Christi -->
+  <ellipse cx="290" cy="148" rx="10" ry="10" fill="#f5c842" opacity=".8"/>
+  <!-- Arms -->
+  <rect x="248" y="155" width="30" height="8" rx="4" fill="#f5c842" opacity=".8"/>
+  <rect x="302" y="155" width="30" height="8" rx="4" fill="#f5c842" opacity=".8"/>
+  <!-- Body -->
+  <rect x="282" y="157" width="16" height="40" rx="5" fill="#f5c842" opacity=".8"/>
+  <!-- Wound in side — Blood and Water -->
+  <circle cx="297" cy="168" r="4" fill="#c62828"/>
+  <path d="M297,172 Q310,195 300,230 Q290,265 285,300" fill="none" stroke="#c62828" stroke-width="4" opacity=".8"/>
+  <path d="M297,172 Q318,200 310,240 Q302,270 298,310" fill="none" stroke="#90caf9" stroke-width="3" opacity=".7"/>
+  <!-- Blood and water labels -->
+  <text x="330" y="220" font-size="10" font-weight="700" fill="#ef9a9a">🩸 BLOOD</text>
+  <text x="330" y="237" font-size="9" fill="#ef9a9a">= Eucharist</text>
+  <text x="330" y="257" font-size="10" font-weight="700" fill="#90caf9">💧 WATER</text>
+  <text x="330" y="274" font-size="9" fill="#90caf9">= Baptism</text>
+  <!-- River of Spirit flowing outward -->
+  <path d="M290,320 Q200,355 100,340 Q60,332 30,350" fill="none" stroke="#1e88e5" stroke-width="4" opacity=".6"/>
+  <path d="M290,320 Q380,355 480,340 Q520,332 550,350" fill="none" stroke="#1e88e5" stroke-width="4" opacity=".6"/>
+  <text x="290" y="370" text-anchor="middle" font-size="10" font-weight="700" fill="#90caf9">🌊 RIVER OF THE SPIRIT — flowing to the whole world 🌊</text>
+  <text x="290" y="390" text-anchor="middle" font-size="9" fill="#64b5f6">Ezekiel 47: The river from the temple that heals everything it touches = Pentecost</text>
+  <!-- Chalice -->
+  <path d="M140,280 Q128,310 120,330 L170,330 Q162,310 150,280 Z" fill="#d4a017" stroke="#b8860b" stroke-width="1.5"/>
+  <ellipse cx="145" cy="278" rx="16" ry="6" fill="#d4a017"/>
+  <rect x="137" y="328" width="16" height="12" rx="2" fill="#b8860b"/>
+  <rect x="127" y="338" width="36" height="8" rx="3" fill="#b8860b"/>
+  <!-- Wine in chalice -->
+  <ellipse cx="145" cy="305" rx="12" ry="8" fill="#c62828" opacity=".7"/>
+  <text x="145" y="360" text-anchor="middle" font-size="9" font-weight="700" fill="#d4a017">THE CUP</text>
+  <text x="145" y="376" text-anchor="middle" font-size="8" fill="#d4a017">"New Covenant</text>
+  <text x="145" y="390" text-anchor="middle" font-size="8" fill="#d4a017">in my blood"</text>
+  <!-- Host -->
+  <circle cx="435" cy="288" r="22" fill="#fffde7" stroke="#d4a017" stroke-width="2.5"/>
+  <!-- IHS -->
+  <text x="435" y="294" text-anchor="middle" font-size="11" font-weight="700" fill="#d4a017">☩</text>
+  <text x="435" y="350" text-anchor="middle" font-size="9" font-weight="700" fill="#d4a017">THE BREAD</text>
+  <text x="435" y="366" text-anchor="middle" font-size="8" fill="#d4a017">"This is my body</text>
+  <text x="435" y="380" text-anchor="middle" font-size="8" fill="#d4a017">given for you"</text>
+  <!-- Title -->
+  <text x="290" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#ef9a9a" font-family="'Cinzel Decorative',serif" letter-spacing="1">CALVARY — THE EUCHARISTIC COVENANT</text>
+  <text x="290" y="52" text-anchor="middle" font-size="9" fill="#ef9a9a">The New Covenant Isaiah, Jeremiah, and Ezekiel predicted, fulfilled by the New Adam</text>
+  <!-- Three darknesses -->
+  <text x="60" y="80" text-anchor="middle" font-size="12" fill="#616161" opacity=".6">🌑</text>
+  <text x="290" y="80" text-anchor="middle" font-size="12" fill="#616161" opacity=".6">🌑</text>
+  <text x="520" y="80" text-anchor="middle" font-size="12" fill="#616161" opacity=".6">🌑</text>
+  <text x="290" y="97" text-anchor="middle" font-size="9" fill="#ef9a9a">"Darkness over the whole land" — Lk 23:44 — But then: RESURRECTION.</text>
+</svg>`,cap:'Calvary: the blood (Eucharist) and water (Baptism) flow from the wounded side of Christ — fulfilling Ezekiel\'s vision of the river of life flowing from the new temple.'},
+  {t:'scripture',tx:'"When Jesus had received the wine, he said, \'It is finished!\' and he bowed his head and gave up his spirit." (John 19:30) — The fourth cup of Passover, drunk at Calvary. The Passover Jesus began in the upper room is now complete. And in the same moment, the New Covenant prophesied by Jeremiah is inaugurated by the blood of the eternal Son of David.',ref:'— John 19:28–30'},
+  {t:'prose',l:'Pentecost — Coming Full Circle',tx:`<p>Fifty days after Passover came the feast of Pentecost — from the Greek for "fiftieth." In Jesus' day, Pentecost was also a celebration of the giving of the Law at Sinai. On this feast, the Holy Spirit descends on the apostles in the Upper Room — the same room where the Last Supper had taken place — in wind and tongues of flame.</p><p>Wind and fire: these are the signs of God's presence on Mount Sinai. But the Sinai storm was terrifying; this "storm of the Spirit" is inviting. And St. Thomas Aquinas makes a precise theological point: the new law of the New Covenant is nothing other than the grace of the Holy Spirit himself. What Jeremiah predicted — law written on hearts — is happening right now. God is not writing on stone tablets. He is inhabiting human hearts.</p><p>Pentecost also reverses Babel. At Babel, the human family was scattered because no one could understand anyone else. At Pentecost, the crowds are amazed because everyone hears in their own language. If Babel scattered us, Pentecost begins to regather us.</p><p>Peter's sermon (Acts 2) is basically a lecture on the Davidic Covenant. "Jesus is the one who fulfils God's promises to David." Three thousand people are baptised that day. Then we read: "They devoted themselves to the apostles' teaching, fellowship, the breaking of bread, and the prayers" (Acts 2:42). In other words, they went to Mass. This is the first description of a Christian liturgy — and it is identical to what we do every Sunday.</p>`},
+  {t:'diag',l:'All Seven Mountains — The Complete Picture of Salvation History',svg:`<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;font-family:'DM Sans',sans-serif">
+  <defs>
+    <linearGradient id="final-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0800"/>
+      <stop offset="100%" stop-color="#1a1000" stop-opacity=".8"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="640" height="320" fill="url(#final-sky)"/>
+  <!-- Stars -->
+  <text x="50" y="20" font-size="7" fill="#fff" opacity=".6">★</text>
+  <text x="150" y="15" font-size="5" fill="#fff" opacity=".5">·</text>
+  <text x="310" y="18" font-size="6" fill="#fff" opacity=".6">★</text>
+  <text x="500" y="12" font-size="5" fill="#fff" opacity=".5">·</text>
+  <text x="600" y="20" font-size="7" fill="#fff" opacity=".6">★</text>
+  <!-- Ground -->
+  <rect x="0" y="288" width="640" height="32" fill="#1c1208"/>
+  <!-- MOUNTAIN 1: EDEN -->
+  <polygon points="52,288 82,195 112,288" fill="#2e7d32" opacity=".85"/>
+  <polygon points="70,250 82,195 94,250" fill="#4caf50" opacity=".6"/>
+  <text x="82" y="192" text-anchor="middle" font-size="10">🌿</text>
+  <text x="82" y="302" text-anchor="middle" font-size="8" fill="#a5d6a7" font-weight="700">EDEN</text>
+  <text x="82" y="313" text-anchor="middle" font-size="7" fill="#81c784">Adam</text>
+  <!-- MOUNTAIN 2: ARARAT -->
+  <polygon points="145,288 175,200 205,288" fill="#1565c0" opacity=".85"/>
+  <polygon points="163,250 175,200 187,250" fill="#42a5f5" opacity=".6"/>
+  <text x="175" y="197" text-anchor="middle" font-size="10">🌈</text>
+  <text x="175" y="302" text-anchor="middle" font-size="8" fill="#90caf9" font-weight="700">ARARAT</text>
+  <text x="175" y="313" text-anchor="middle" font-size="7" fill="#64b5f6">Noah</text>
+  <!-- MOUNTAIN 3: MORIAH -->
+  <polygon points="238,288 268,188 298,288" fill="#c62828" opacity=".85"/>
+  <polygon points="254,245 268,188 282,245" fill="#ef5350" opacity=".6"/>
+  <text x="268" y="184" text-anchor="middle" font-size="10">⭐</text>
+  <text x="268" y="302" text-anchor="middle" font-size="8" fill="#ef9a9a" font-weight="700">MORIAH</text>
+  <text x="268" y="313" text-anchor="middle" font-size="7" fill="#ef9a9a">Abraham</text>
+  <!-- MOUNTAIN 4: SINAI -->
+  <polygon points="330,288 360,180 390,288" fill="#7b1fa2" opacity=".85"/>
+  <polygon points="346,243 360,180 374,243" fill="#ab47bc" opacity=".6"/>
+  <!-- Lightning on Sinai -->
+  <polyline points="354,200 350,215 357,215 353,230" fill="none" stroke="#ffd54f" stroke-width="2" opacity=".8"/>
+  <text x="360" y="302" text-anchor="middle" font-size="8" fill="#ce93d8" font-weight="700">SINAI</text>
+  <text x="360" y="313" text-anchor="middle" font-size="7" fill="#ce93d8">Moses</text>
+  <!-- MOUNTAIN 5: ZION -->
+  <polygon points="420,288 450,185 480,288" fill="#e65100" opacity=".85"/>
+  <polygon points="436,248 450,185 464,248" fill="#ffa726" opacity=".6"/>
+  <!-- Mini temple on Zion -->
+  <rect x="440" y="196" width="20" height="14" rx="2" fill="#d4a017"/>
+  <text x="450" y="302" text-anchor="middle" font-size="8" fill="#ffcc80" font-weight="700">ZION</text>
+  <text x="450" y="313" text-anchor="middle" font-size="7" fill="#ffcc80">David</text>
+  <!-- MOUNTAIN 6: ZION AGAIN (Prophets: New Covenant) -->
+  <polygon points="508,288 538,192 568,288" fill="#1565c0" opacity=".85"/>
+  <polygon points="524,248 538,192 552,248" fill="#42a5f5" opacity=".6"/>
+  <!-- Radiant sun rising -->
+  <circle cx="538" cy="188" r="10" fill="#ffd54f" opacity=".7"/>
+  <text x="538" y="302" text-anchor="middle" font-size="8" fill="#90caf9" font-weight="700">NEW ZION</text>
+  <text x="538" y="313" text-anchor="middle" font-size="7" fill="#64b5f6">Prophets</text>
+  <!-- MOUNTAIN 7: CALVARY -->
+  <polygon points="598,288 620,170 642,288" fill="#8b0000" opacity=".9"/>
+  <polygon points="612,238 620,170 628,238" fill="#c62828" opacity=".7"/>
+  <!-- Cross on Calvary -->
+  <rect x="617" y="174" width="6" height="32" rx="1" fill="#d32f2f"/>
+  <rect x="610" y="185" width="20" height="5" rx="1" fill="#d32f2f"/>
+  <text x="620" y="302" text-anchor="middle" font-size="8" fill="#ef9a9a" font-weight="700">CALVARY</text>
+  <text x="620" y="313" text-anchor="middle" font-size="7" fill="#ef9a9a">Jesus</text>
+  <!-- Connecting arc / red thread -->
+  <path d="M82,240 Q175,210 268,235 Q360,210 450,238 Q538,216 620,220" fill="none" stroke="#d4a017" stroke-width="2" stroke-dasharray="6,4" opacity=".7"/>
+  <text x="320" y="168" text-anchor="middle" font-size="10" fill="#d4a017" font-weight="700" letter-spacing="1">THE COVENANT THREAD</text>
+  <text x="320" y="184" text-anchor="middle" font-size="9" fill="#d4a017">"Time and again you offered them covenants" — Eucharistic Prayer IV</text>
+  <!-- Big golden glow at Calvary -->
+  <radialGradient id="calvglow" cx="50%" cy="30%" r="50%" gradientTransform="translate(0.62,0.22) scale(0.15)">
+    <stop offset="0%" stop-color="#ffd54f" stop-opacity=".5"/>
+    <stop offset="100%" stop-color="#ffd54f" stop-opacity="0"/>
+  </radialGradient>
+  <!-- Title -->
+  <text x="320" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#d4a017" font-family="'Cinzel Decorative',serif" letter-spacing="2">SEVEN MOUNTAINS · SEVEN MEDIATORS · ONE GOD</text>
+  <text x="320" y="40" text-anchor="middle" font-size="9" fill="#d4a017" opacity=".8">The entire Bible is one story — God repeatedly trying to make us his family</text>
+</svg>`,cap:'Seven mountains, seven mediators, one unbroken story: Adam · Noah · Abraham · Moses · David · Prophets\' New Zion · Jesus at Calvary. The golden thread of covenant runs through them all.'},
+  {t:'prose',l:'Coming Full Circle — You Are the Adamic Shine, Restored',tx:`<p>With the gift of the Holy Spirit, we have come full circle in salvation history. The divine filiation — the "shine" — that Adam enjoyed in the garden as a child of God has been given back to all of us through baptism. St. Paul says it best: "God sent forth his Son, born of woman, born under the Law, to redeem those under the Law, so that we might receive adoption as sons. And because you are sons, God has sent the Spirit of his Son into our hearts, crying, 'Abba! Father!'" (Galatians 4:4–7).</p><p>Other religions don't even claim to make you a child of God. In Islam, the best you can hope for is to be a good servant. In Buddhism, the goal is to lose the illusion of your selfhood. In Hinduism, God is ultimately impersonal. These religions are not paths up the same mountain — they are climbing different mountains entirely.</p><p>But in Christianity, through baptism, you receive back everything Adam lost. Son or daughter of God. King or queen over your own passions and sins. Priest, offering your whole life to God. Prophet, speaking his word to the world. And bride or bridegroom, in a relationship with the divine Person who loved you into existence and will love you through eternity.</p><p>Now go to Mass. The sacraments make you participate in the events of scripture. When you receive the Eucharist, you are receiving the fruit of the Tree of Life in Eden. You are receiving the manna from heaven in the desert. You are sitting at the feast David held in Jerusalem. And you are sharing in the Last Passover of Jesus and his apostles. All those events become things you have done — and the story of scripture becomes your story.</p><p>That is the sacramental mystery. And that is why the little word "covenant" can change everything.</p>`},
+  {t:'cards',l:'The Sacraments as Participation in Salvation History',items:[
+    {ic:'💧',ti:'Baptism — You Are All of It',bd:'When baptised: the creation emerging from the waters at dawn of time; Noah\'s family surviving the flood; the Israelites crossing the Red Sea; Jesus sinking and rising in the Jordan. All those events become yours. You are inserted into the entire story.'},
+    {ic:'🍞',ti:'Eucharist — The Feast That Completes Everything',bd:'When you receive the Eucharist, you are eating: the fruit of the Tree of Life in Eden; the manna from heaven in the desert; the great feast of David in Jerusalem; the Passover supper of Jesus on the night before he died. The entire covenant sequence climaxes in this one meal.'},
+    {ic:'🕊️',ti:'Confirmation — The Pentecost of Your Life',bd:'What happened to the 3,000 at Pentecost happens to you at Confirmation. The Holy Spirit — the "new spirit" Ezekiel promised — inhabits your heart. The New Covenant is not external law. It is an interior Person taking up residence.'},
+    {ic:'💒',ti:'Marriage — The Cosmic Covenant Sign',bd:'Adam\'s marriage to Eve in Eden was the first covenant ever made. Marriage is the sign of the whole story: God\'s passionate, permanent, faithful, fruitful love for his people. "The two shall become one flesh" (Eph 5:31) — this is a "great mystery, referring to Christ and the Church."'},
+    {ic:'👼',ti:'Holy Orders — Covenant Mediators Still Needed',bd:'Just as Moses mediated the Old Covenant, the priest mediates the New. He stands at the altar and does what Jesus commanded: "Do this in memory of me." The ministerial priesthood needs the common priesthood (your lives as bread and wine) to fulfil its calling. We need each other.'},
+  ]},
+  {t:'vat',tx:`<strong>Dei Verbum §2</strong> (Vatican II): "Through this revelation, therefore, the invisible God... out of the abundance of his love speaks to men as friends... and lives among them... so that he may invite and take them into fellowship with himself." The entire covenant story is the story of God's friendship with humanity — a friendship that reaches its fullest expression in the Eucharist. As St. John Paul II wrote in <em>Ecclesia de Eucharistia §1</em>: "The Church lives from the Eucharist." The Church lives because the seven-mountain story of salvation history is recapitulated in every Mass.`},
+ ]},
+];
 
-    <footer>
-        <p>A creative interpretation inspired by "Bible Basics for Catholics" by John Bergsma.</p>
-    </footer>
+/* ========== MINI MOUNTAIN SVGs FOR HERO ========== */
+const mtColors=['#2e7d32','#1565c0','#c62828','#7b1fa2','#e65100','#1565c0','#8b0000'];
+const mtLabels=['Adam','Noah','Abraham','Moses','David','Prophets','Jesus'];
+const mtIcons=['🌿','🌈','⭐','⚡','🌟','🌤️','✝️'];
 
+document.addEventListener('DOMContentLoaded',()=>{
+  /* Build hero mountain row */
+  const mrow=document.getElementById('mrow');
+  C.forEach((c,i)=>{
+    const d=document.createElement('div');
+    d.className='mt-badge';
+    d.onclick=()=>showChap(c.id);
+    const h=60+i*6;
+    d.innerHTML=`<svg width="58" height="${h}" viewBox="0 0 58 ${h}" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="m${i}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="${mtColors[i]}"/><stop offset="100%" stop-color="${mtColors[i]}88"/>
+      </linearGradient></defs>
+      <polygon points="5,${h} 29,8 53,${h}" fill="url(#m${i})" opacity=".85"/>
+      <polygon points="20,${h/2+4} 29,8 38,${h/2+4}" fill="white" opacity=".18"/>
+      <text x="29" y="22" text-anchor="middle" font-size="12">${mtIcons[i]}</text>
+    </svg>
+    <div class="mt-label">${mtLabels[i]}</div>`;
+    mrow.appendChild(d);
+  });
+  /* Intersection observer for reveals */
+  const ob=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ob.unobserve(e.target);}});},{threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
+});
+
+function go(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  const map={hero:'screen-hero',ov:'scr-ov',det:'scr-det'};
+  const el=document.getElementById(map[id]);
+  if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+  if(id==='ov')buildGrid();
+  document.querySelectorAll('.nbts .nb').forEach(b=>b.classList.remove('act'));
+  if(id==='ov')document.querySelector('.nbts .nb').classList.add('act');
+}
+
+function buildGrid(){
+  const g=document.getElementById('cgrid');
+  if(g.dataset.built)return;g.dataset.built='1';
+  C.forEach(c=>{
+    const d=document.createElement('div');d.className='ccard reveal';d.onclick=()=>showChap(c.id);
+    const tags=c.tags.map(t=>`<span style="font-family:var(--fu);font-size:.58rem;font-weight:700;padding:.15rem .48rem;border-radius:20px;background:${c.pl};color:${c.c}">${t}</span>`).join('');
+    d.innerHTML=`<div class="cc-hd" data-icon="${c.icon}" style="background:linear-gradient(135deg,${c.c},${c.dk})"><div class="cc-num">${c.num}</div><div class="cc-nm">${c.nm}</div><div class="cc-sb">${c.sb}</div></div><div class="cc-bd"><div style="display:flex;flex-wrap:wrap;gap:.3rem;margin-bottom:.6rem">${tags}</div><p>${c.prev}</p></div><div class="cc-ft" style="background:${c.c}"><span>${c.num}</span><span>Read →</span></div>`;
+    g.appendChild(d);
+  });
+  setTimeout(()=>{const ob2=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ob2.unobserve(e.target);}});},{threshold:.08});document.querySelectorAll('#cgrid .reveal').forEach(el=>ob2.observe(el));},100);
+}
+
+function showChap(id){
+  const c=C.find(x=>x.id===id);if(!c)return;
+  let body='';
+  c.ct.forEach(b=>{
+    if(b.t==='bergsma')body+=`<div class="bergsma-voice reveal"><span class="bv-lbl">📖 In Bergsma's Own Words</span><p class="bv-text">${b.tx}</p><p class="bv-cite">— ${b.cite}</p></div>`;
+    else if(b.t==='prose')body+=`<div class="sec reveal"><div class="sec-lbl">${b.l}</div><div class="prose">${b.tx}</div></div>`;
+    else if(b.t==='scripture')body+=`<div class="scripture reveal"><span class="sc-lbl">📜 Scripture — Key Text</span><p class="sc-text">${b.tx}</p><p class="sc-ref">${b.ref}</p></div>`;
+    else if(b.t==='diag')body+=`<div class="sec reveal"><div class="sec-lbl">${b.l}</div><div class="diagram-wrap">${b.svg}<div class="diag-cap">${b.cap}</div></div></div>`;
+    else if(b.t==='vat')body+=`<div class="vat-box reveal"><span class="vat-lbl">🏛️ Vatican II / Catechism / Pope</span><div class="vat-body">${b.tx}</div></div>`;
+    else if(b.t==='cards'){
+      let cl=`<div class="sec reveal"><div class="sec-lbl">${b.l}</div><div class="cards">`;
+      b.items.forEach(i=>cl+=`<div class="card reveal"><div class="card-ic">${i.ic}</div><div class="card-ti">${i.ti}</div><div class="card-bd">${i.bd}</div></div>`);
+      body+=cl+'</div></div>';
+    }
+  });
+  const idx=C.indexOf(c),nxt=idx<C.length-1?C[idx+1]:null,prv=idx>0?C[idx-1]:null;
+  const tags=c.tags.map(t=>`<span class="dtag">${t}</span>`).join('');
+  document.getElementById('dcont').innerHTML=`<div class="d-hd" data-icon="${c.icon}" style="background:linear-gradient(150deg,${c.c},${c.dk})"><div class="d-inner"><div class="d-num">${c.num}</div><h1 class="d-title">${c.nm}</h1><p class="d-sb">${c.sb}</p><div class="d-tags">${tags}</div></div></div><div class="db" style="--clr:${c.c};--clrp:${c.pl}"><div class="prose reveal" style="font-style:italic;border-left-color:${c.c};margin-bottom:2rem">${c.prev}</div>${body}<div class="d-nav"><button class="nb ng" onclick="go('ov')">← All Chapters</button>${prv?`<button class="nb" style="background:${prv.c};color:#fff;padding:.28rem .75rem;border-radius:5px;cursor:pointer;font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none" onclick="showChap('${prv.id}')">← ${prv.num}</button>`:''} ${nxt?`<button class="nb" style="background:${nxt.c};color:#fff;padding:.28rem .75rem;border-radius:5px;cursor:pointer;font-family:var(--fu);font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:none" onclick="showChap('${nxt.id}')">${nxt.num} →</button>`:''}</div></div>`;
+  go('det');
+  setTimeout(()=>{const ob3=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ob3.unobserve(e.target);}});},{threshold:.06});document.querySelectorAll('#dcont .reveal').forEach(el=>ob3.observe(el));},120);
+}
+</script>
 </body>
 </html>
